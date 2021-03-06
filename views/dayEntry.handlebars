@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width, initial-scale=1.0">
+    <title>Daily Entry</title>
+    <link rel="stylesheet" href="/css/entryStyle.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="/images/leaf.svg" />
+        <h1>Calendar</h1>
+        <img src="/images/leaf.svg" />
+      </div>
+
+      <div class="subheader">
+        <!-- maybe make it redirect to calendar/plant... fix below before final-->
+        <!-- <a href="/calendar/{{plant}}" id="prevPage"><</a> -->
+        <a href="/calendar" id="prevPage"><</a>
+        <h2>{{plant}} on {{date}}</h2>
+      </div>
+
+      <div id="photoHeader">
+        <h3>Your photos for {{date}}</h3>
+        <!-- <a href="/addPhoto/{{plant}}/{{date}}" id="addPhoto">+</a> -->
+      </div>
+
+      <div id="photos">
+        
+        {{#each slides}}
+          <div class="slide">
+            <img src="/images/{{image}}" />
+            <!--<p>{{caption}}</p>-->
+          </div>
+        {{/each}}
+      
+      </div>
+
+      <div id="addPhoto+Cap">
+        <form id="addEntryForm" role="form" method="get">
+          <div class="form-group">
+            <label for="img">Add photo</label>
+            <input type="file" id="img" name="img" accept=".svg,.jpg,.png" required>
+          </div>
+
+          <!--<div class="form-group">
+            <h3>Caption</h3>
+            <input type="text" class="form-control" id="caption" name="caption">
+          </div>-->
+
+          <input type="submit" id="subPhoto" class="btn btn-default" value="Add photo"></input>
+        </form>
+      </div>
+
+      <div class="input">
+      <!--<form id="addEntryForm" role="form" method="get" action="/editEntry">-->
+      <form id="addEntryForm" role="form" method="get"action="/dayEntry/{{plant}}/{{date}}/add">
+        <div class="form-group">
+          <h3>Plant Condition</h3>
+          <label>
+            <input type="radio" name="buttonGroup" value="bad" id="bad">
+            <img src="/images/bad-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="okay" id="okay">
+            <img src="/images/normal-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="good" id="good">
+            <img src="/images/good-face.svg">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <h3>Notes</h3>
+          <!-- <label for="description">Notes:</label> -->
+          <input type="text" class="form-control" id="description" name="description" value='{{text}}'>
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Update entry"></input>
+
+      </form>
+
+
+    
+    </div>
+
+
+      </div>
+
+      <img id='bottom-rectangle' src="/images/bottom-rectangle.svg">
+
+      <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href='/index'>
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+      </div>
+  </div>
+
+  <script src="/js/entryJS.js"></script>
+  
+  <script type="app.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

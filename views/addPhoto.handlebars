@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <title>Add Photo</title>
+  <link rel="stylesheet" href="/css/photo.css">
+</head>
+<body>
+
+
+  <div class="page-container">
+
+    <div class="header">
+      <div>
+        <img id='left-leaf' src="/images/small-leaf.svg">
+      </div>
+      <div>
+       <p>Add Photo</p>
+      </div>
+      <div>
+        <img id='right-leaf' src="/images/small-leaf.svg">
+      </div>
+    </div>
+
+    <div id="headerCenter">
+      <div>
+        <h1>Your Photo Gallery</h1>
+      </div>
+    </div>
+    <h4>Select a photo</h4>
+    <div id="gallery">
+      {{#each images}}
+        <div class="slide">
+        <img src='/images/{{image}}'>
+      </div>
+      {{/each}}
+
+    </div>
+
+    <h4>Add a caption</h4>
+    <div id="caption">
+      <input type="text" placeholder="Caption">
+    </div>
+
+    <div id="footer">
+      <a id='cancel' href='/dayEntry/{{plant}}/{{date}}'>Cancel</a>
+      <a id='continue' href='/dayEntry/{{plant}}/{{date}}'>Add</a>
+    </div>
+  </div>
+
+
+<script src="/js/addPhoto.js"></script>
+<script type="app.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+	"Plants": [
+		{	
+			"pic": "Stripes.svg",
+			"nickname": "Stripes",
+			"species": "Philodendron",
+			"watering": "07:00 AM every day",
+			"start": "01/01/2021"
+		},
+		{	
+			"pic": "Froggy.svg",
+			"nickname": "Froggy",
+			"species": "Nephthytis",
+			"watering": "12:00 PM every other day",
+			"start": "01/02/2021"
+		},
+		{	
+			"pic": "Emily.svg",
+			"nickname": "Emily",
+			"species": "Begonia",
+			"watering": "05:00 PM every week",
+			"start": "01/03/2021"
+		},
+		{	
+			"pic": "Bert.svg",
+			"nickname": "Bert",
+			"species": "Peperomia",
+			"watering": "01:00 PM every week",
+			"start": "01/04/2021"
+		}
+	]
+}
+
+
+

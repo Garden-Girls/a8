@@ -1,0 +1,177 @@
+* {
+	box-sizing: border-box;
+	max-width: 375px;
+	max-height: 667px;
+	position: relative;
+	margin:0 auto;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 15px;
+	position: fixed;
+	top: 0;
+}
+
+.header img {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.plantSelect {
+	width: 85%;
+	height: 50px;
+	margin: 20px;
+	background-color: green;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#plantDrop {
+	width: 100px;
+	height: 30px;
+}
+
+/*calendar*/
+.calendar {
+	width: 85%;
+	height: 58.5%;
+	outline: 2px solid black;
+}
+
+.month {
+	width: 100%;
+	height: 4rem;
+	background-color: green;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+	text-align: center;
+}
+
+.month h1 {
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.month p {
+	font-size: 12px;
+}
+
+button {
+	height: 30px;
+	width: 30px;
+	background-color: transparent;
+	border: none;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.weekdays {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 1px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.weekdays div {
+	font-size: 1rem;
+	/*margin: 0.2rem;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
+	outline: 2px solid black;
+	width:43.5px;
+}
+
+.days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: 0px;
+}
+
+.days a {
+	font-size: 1.2rem;
+	text-decoration: none;
+	height: 51px;
+	width:43.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
+	/*change color depending on entry*/
+	outline: 1px solid black;
+}
+
+.days a:hover:not(.today) {
+	background-color: blue;
+	cursor: pointer;
+}
+
+.prev-date, .next-date {
+	opacity: 0.5;
+}
+
+.loggable {
+	font-weight: bold;
+	background-color: #ccffb3;
+}
+
+.today {
+	background-color: yellow;
+}
+
+#calendar-button{width: 46px;
+	height: 44px;
+	top:-50px;
+	left:80px;}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: -50px;
+	left: -80px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+}
+
+#bottom-rectangle{
+	position: relative;
+	width: 375px;
+	height: 58px;
+	left: 0px;
+	top: 609px;
+}
+
+
+img#bottom-rectangle {
+    top: 88px;
+}
+
+a#home-button {
+    top: 38px;
+}
+
+#calendar-button {
+    width: 46px;
+    height: 44px;
+    top: 40px;
+    left: 80px;
+}

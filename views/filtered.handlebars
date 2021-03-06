@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <div class="page-container">
+
+    <div class= "title">
+      <img id='left-leaf' src="images/small-leaf.svg">
+      <p>ADD PLANTS</p>
+      <img id='right-leaf' src="images/small-leaf.svg">
+    </div>
+
+    <div class="search">
+      <img id='search-bar' src='images/search-bar.svg'>
+      <button id='search-button'>
+        <img src='images/search-button.svg'>
+      </button>
+    </div>  
+
+    <div class="filters">
+      <p id='filters'>FILTERS</p>
+
+      <a id='ferns-box' href="/filteredFern">
+        <img src="images/ferns-button.svg">
+      </a>
+      <p id='ferns'>Ferns</p>
+
+
+      <a id='flowers-box' href="/search">
+          <img src="images/ticked-box.svg">
+      </a>
+      <p id='flowers'>Flowers</p>
+
+      <a id='herbs-box' href="/filteredHerb">
+        <img src="images/herbs-button.svg">
+      </a>
+      <p id='herbs'>Herbs</p>
+
+
+      <img id='down-arrow' src="images/down-arrow.svg">
+  
+    <div class='subtitle'>
+      <p id='subtitle'>74 Results</p>
+
+      <div class='sort'>
+      <form id="sort-by" action="/action_page.php">
+      <label for="sort-by" class='comments'></label>
+      <select name="sort" id="sort">
+        <optgroup label="Popularity">
+        </optgroup>
+
+        <optgroup label="Z-A">
+        </optgroup>
+
+        <optgroup label="A-Z">
+        </optgroup>
+      </select>
+      </form>
+    </div>
+      
+      <div class='result-1'>
+       <img id='box' src="images/result-1-box.svg">
+        <img id="photo" src="images/lavender.svg">
+        <a href ='/lavenderInfopage' id='help'>
+          <img src="images/result-1-help.svg">
+        </a>
+        <a href ='/editPlantPage/Lavender' id='add'>
+          <img src="images/result-1-add.svg">
+        </a>
+
+        <p id='name'>Lavender</p>
+
+      </div>
+
+       <div class='result-2'>
+        <img id='box' src="images/result-2-box.svg">
+        <img id="photo" src="images/phalenopsis-orchid.svg">
+        <a href ='/orchidInfopage' id='help'>
+          <img src="images/result-2-help.svg">
+        </a>
+        <a href ='/editPlantPage/Orchid' id='add'>
+          <img src="images/result-2-add.svg">
+        </a>
+
+        <p id='name'>Phalenopsis Orchid</p>
+      </div>
+
+      <div class='result-3'>
+        <img id='box' src="images/result-3-box.svg">
+        <img id="photo" src="images/sunflower.svg">
+        <a href ='#' id='help'>
+          <img src="images/result-3-help.svg">
+        </a>
+
+        <p id='name'>Sunflower</p>
+      </div>
+
+    </div>
+    
+      
+<div class='navigation'>
+  <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
+  <a id='home-button' href='/index'>
+      <img src="images/home-button.svg">
+  </a>
+  <a href="/calendar">
+    <img id='calendar-button' src="images/calendar-button.svg">
+  </a>
+</div>
+  </div>
+
+
+
+<script type="app.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

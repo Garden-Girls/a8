@@ -1,0 +1,106 @@
+*{
+    position: relative;
+}
+
+#nickname {
+    position: absolute;
+    width: 265.5px;
+    height: 26.46px;
+    left: 59px;
+    top: 136.05px;
+}
+
+
+
+div#start-date {
+    position: absolute;
+    width: 312.5px;
+    height: 28.46px;
+    left: 58px;
+    top: 279.05px;
+}
+#watering h4 {
+    position: absolute;
+    width: 184.5px;
+    height: 26.46px;
+    left: 77px;
+    top: 48.05px;
+}
+
+#watering{
+    position: absolute;
+    width: 351.5px;
+    height: 257.46px;
+    left: 10px;
+    top: 210.05px;
+}
+#how-often {
+    position: absolute;
+    width: 351.5px;
+    height: 257.46px;
+    left: 58px;
+    top: 294.05px;
+}
+
+#submitBtn {
+    position: absolute;
+    left: 102px;
+    top: 561.05px;
+    width: 143.05px;
+    height: 37px;
+}
+
+p{
+    top: 500.05px;
+}
+
+
+img#flower {
+    max-width: 140px;
+    max-height: 160px;
+    top: 127px;
+    left: 109px;
+}
+
+div#setTime {
+    top: 205px;
+    width: 350px;
+    left: 47px;
+    height: 23px;
+}
+
+div#start-date {
+    top: 279px;
+}
+
+
+div#watering {
+    top: 264px;
+}
+
+div#how-often {
+    top: 450px;
+}
+
+div#setTime {
+    top: 265px;
+}
+
+label#species {
+    top: 190px;
+    left: 58px;
+}
+
+div#start-date {
+    top: 305px;
+}
+
+h4#one {
+    top: 245px;
+    left: 100px;
+}
+
+input#species {
+    top: 187px;
+    left: 81px;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='/js/bootstrap.js'></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/editPlantPage.css">
+</head>
+<body>
+
+
+  <div class="page-container">
+
+    <div class= "title">
+      <img id='left-leaf' src="/images/small-leaf.svg">
+      <p> Add Plants </p>
+      <img id='right-leaf' src="/images/small-leaf.svg">
+    </div>
+    </div>
+    
+    <div class="back-button">
+      <a id='back-button' href='/search'>
+      <img src='/images/back-button.svg'>
+    </a>
+    </div>
+
+    
+    <div class="image" title="click to change">
+      <img id="flower" src="/images/add-photo.svg" onclick="imagefun()">
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/editPlantPage/:{{species}}/add">
+        
+        <div class="form-group" id='nickname'>
+          <label for="name">Nickname:</label>
+          <input type="text" class="form-control" id="name" name="name" required></div>
+        </div>
+
+        <label id='species' for='name'>Species: {{species}}</label>
+        
+        <div id='start-date' class="form-group">
+          <label for="date">Start Date:</label>
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
+        </div>
+
+        
+        <h4 id="one">Watering Reminder</h4>
+        <div id="setTime" class="form-group">
+          <label for="remindTime">Time of Day:</label>
+          <input type="time" class="form-control" id="remindTime" name="remindTime" required>
+        </div>
+
+        <div id = "how-often" class="form-group">
+        <h4>How often:</h4>
+        <div class="form-group">
+          <label for="Every day">Every day</label>
+          <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day" checked>
+
+          <label for="Every other day">Every other day</label>
+          <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">
+          <br>
+          <label for="Every week">Every week</label>
+          <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week"></div>
+
+        </div>
+
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant"></input>
+        <!-- doesn't display
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept=".svg">
+      -->
+
+      </form>
+    </div>
+
+
+
+<div class='navigation'>
+
+  <img id='bottom-rectangle' src="/images/bottom-rectangle.svg">
+
+  <a id='home-button' href='/index'>
+      <img src="/images/home-button.svg">
+  </a>
+
+  <a href="/calendar">
+    <img id='calendar-button' src="/images/calendar-button.svg">
+  </a>
+
+</div>
+
+
+  </div>
+
+
+<script src='/js/newPlant.js'></script>
+<script type="app.js"></script>
+</body>
+</html>

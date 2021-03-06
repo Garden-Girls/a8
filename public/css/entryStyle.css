@@ -1,0 +1,186 @@
+* {
+	box-sizing: content-box;
+	max-width: 375px;
+	max-height: 667px;
+	position: relative;
+	margin:auto;
+}
+}
+
+.container {
+	width: 100%;
+	overflow: none;
+}
+
+.header {
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 15px;
+}
+
+.header img {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.subheader {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+/*need to format better*/
+/*left outline for visibility*/
+#prevPage {
+	height: 25px;
+	width: 25px;
+	text-decoration: none;
+	color: black;
+	margin-left: 0;
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+h3 {
+	width: 90%;
+	margin: 10px;
+	margin-top: 15px;
+	font-size: 18px;
+}
+
+#photoHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*#addPhoto {
+	width: 40px;
+	height: 40px;
+	float: right;
+	margin-right: 20px;
+}*/
+#addPhoto {
+	height: 25px;
+	width: 25px;
+	text-decoration: none;
+	color: black;
+	margin-left: 0;
+	margin-right: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	border: 3px solid black;
+}
+
+#photos {
+	width: 90%;
+	height: 110px;
+	margin: auto;
+	display: flex;
+	background-color: green;
+	overflow: auto;
+	white-space: nowrap;
+	outline: 2px solid black;
+}
+
+#photos .slide {
+	display: inline-block;
+}
+
+#photos div {
+	background-color: transparent;
+	margin: 10px;
+	text-align: center;
+}
+
+/*
+.moods {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 5px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+input[type='radio'][name='buttonGroup'] {
+	display: none;
+}
+
+
+label {
+	display: inline-block;
+	padding: 3px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: gray;
+	width: 60px;
+	text-align: center;
+}
+
+input[type='radio'][name='buttonGroup']:checked + label {background-color: yellow;} */
+/*.moods .face {
+	border: 3px outset white;
+	display: flex;
+	justify-content: space-around;
+}
+
+.moods .selected{
+	border: 3px inset gray;
+}*/
+
+.text {
+	width: 90%;
+	max-height: 130px;
+	margin: auto;
+	overflow-y: scroll;
+	padding: 10px;
+	outline: 2px solid black;
+}
+
+#editing {
+	width: 35px;
+	margin-right: 20px;
+	margin-top: 5px;
+	float: right;
+}
+
+/*should change to div and buttons*/
+
+#calendar-button{width: 46px;
+	height: 44px;
+	top:-50px;
+	left:80px;}
+
+#calendar-button{
+	width: 46px;
+	height: 44px;
+	top:-50px;
+	left:250px;}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: -50px;
+	left: 82px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+}
+
+#bottom-rectangle{
+	position: relative;
+	width: 375px;
+	height: 58px;
+	left: 0px;
+	top: 609px;
+}
+
+.hide {
+	display:none;
+}

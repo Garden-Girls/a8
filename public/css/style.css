@@ -1,0 +1,937 @@
+*{
+	box-sizing: content-box;
+	max-width: 375px;
+	max-height: 667px;
+	margin: auto;
+	position: relative;
+}
+
+
+.plant-parenthood{
+	position: absolute;
+	width: 234px;
+	height: 53px;
+	left: 70px;
+	top: 16px;
+
+	font-family: Pacifico;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 53px;
+	text-align: center;}
+.leaf{
+	position: absolute;
+	width: 43.18px;
+	height: 30px;
+	left: 165px;
+	top: 69px;}
+.home-photo{
+	position: absolute;
+	width: 351.5px;
+	height: 257.46px;
+	left: 10px;
+	top: 125.05px;}
+.my-plants-button{
+	position: absolute;
+	width: 266.72px;
+	height: 62px;
+	left: 52.36px;
+	top: 436px;}
+.add-plants-button{
+	position: absolute;
+	width: 266.72px;
+	height: 62px;
+	left: 54px;
+	top: 518px;}
+
+#left-leaf{
+	position: absolute;
+	width: 43.18px;
+	height: 30px;
+	left: 38px;
+	top: 16px;}
+.title p{
+	position: absolute;
+	width: 211px;
+	height: 46px;
+	left: 82px;
+	top: 16px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+	text-align: center;}
+#right-leaf{
+	position: absolute;
+	width: 43.18px;
+	height: 30px;
+	left: 299px;
+	top: 16px;}
+#back-button{
+	position: absolute;
+	width: 47px;
+	height: 44px;
+	left: 9px;
+	top: 86px;}
+#edit-button{
+	position: absolute;
+	width: 70px;
+	height: 35px;
+	left: 299px;
+	top: 90px;}
+#ok-button{
+	position: absolute;
+	width: 59px;
+	height: 34px;
+	left: 302px;
+	top: 83px;}
+
+	#close-button{
+	position: absolute;
+	width: 59px;
+	height: 34px;
+	left: 302px;
+	top: 83px;}
+
+#stripes{
+	position: absolute;
+	width: 89px;
+	height: 88.8px;
+	left: 12px;
+	top: 142.97px;}
+
+.stripes > h2 {
+	position: absolute;
+	width: 176px;
+	height: 29.93px;
+	left: 117px;
+	top: 142.97px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;}
+.stripes > p{
+	position: absolute;
+	width: 176px;
+	height: 59.87px;
+	left: 120px;
+	top: 171.91px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+#stripes-rectangle-button{
+	position: absolute;
+	width: 375px;
+	height: 113.75px;
+	left: 0px;
+	top: 130px;
+
+	background: rgba(107, 191, 115, 0.01);
+	box-sizing: border-box;}
+
+#froggy{
+	position: absolute;
+	width: 89px;
+	height: 88.8px;
+	left: 15px;
+	top: 254.72px;}
+.froggy > h2{
+	position: absolute;
+	width: 176px;
+	height: 29.93px;
+	left: 117px;
+	top: 255.72px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;}
+.froggy > p{
+	position: absolute;
+	width: 176px;
+	height: 58.87px;
+	left: 117px;
+	top: 283.66px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+#froggy-rectangle-button{
+	position: absolute;
+	width: 375px;
+	height: 113.75px;
+	left: 0px;
+	top: 243.75px;
+	box-sizing: border-box;}
+
+#emily{
+	position: absolute;
+	width: 89px;
+	height: 88.8px;
+	left: 15px;
+	top: 368.47px;}
+.emily > h2{
+	position: absolute;
+	width: 176px;
+	height: 29.93px;
+	left: 114px;
+	top: 368.47px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;}
+.emily > p {
+	position: absolute;
+	width: 176px;
+	height: 62.86px;
+	left: 114px;
+	top: 394.42px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+#emily-rectangle-button{
+	position: absolute;
+	width: 375px;
+	height: 113.75px;
+	left: 0px;
+	top: 356.5px;
+	background: rgba(107, 191, 115, 0.01);
+	box-sizing: border-box;}
+
+#bert{
+	position: absolute;
+	width: 89px;
+	height: 88.8px;
+	left: 15px;
+	top: 482.22px;}
+.bert > h2{
+	position: absolute;
+	width: 176px;
+	height: 29.93px;
+	left: 117px;
+	top: 482.22px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;}
+.bert > p{
+	position: absolute;
+	width: 176px;
+	height: 58.87px;
+	left: 117px;
+	top: 512.16px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+#bert-rectangle-button{
+	position: absolute;
+	width: 375px;
+	height: 113.75px;
+	left: 0px;
+	top: 469.25px;
+	box-sizing: border-box;}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: 620px;
+	left: 82px;
+
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+#bottom-rectangle{
+	position: absolute;
+	width: 375px;
+	height: 58px;
+	left: 0px;
+	top: 609px;}
+#calendar-button{
+	width: 46px;
+	height: 44px;
+	top:621px;
+	left:255px;}
+
+#feb{
+	position: absolute;
+	width: 157px;
+	height: 27px;
+	left: 106px;
+	top: 30px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;}
+#feb-calendar{
+	position: absolute;
+	width: 325px;
+	height: 220px;
+	left: 25px;
+	top: 60px;}
+#mar{
+	position: absolute;
+	width: 157px;
+	height: 27px;
+	left: 106px;
+	top: 300px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;}
+#mar-calendar{
+	position: absolute;
+	width: 325px;
+	height: 220px;
+	left: 25px;
+	top: 330px;}
+
+
+#bad-face{
+	position: absolute;
+	width: 39px;
+	height: 37px;
+	left: 39px;
+	top: 382px;}
+#normal-face{
+	position: absolute;
+	width: 38px;
+	height: 37px;
+	left: 104px;
+	top: 382px;}
+#good-face{
+	position: absolute;
+	width: 39px;
+	height: 37px;
+	left: 169px;
+	top: 382px;}
+
+
+.top #journalPhoto{
+	position: absolute;
+	width: 160px;
+	height: 160px;
+	left: 108px;
+	top: 87px;}
+
+.top #editPhoto{
+	position: absolute;
+	width: 158px;
+	height: 158px;
+	left: 118px;
+	top: 136px;}
+
+.top >h2{
+	position: absolute;
+	width: 105px;
+	height: 30px;
+	left: 135px;
+	top: 254px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;}
+
+.top >p{
+	position: absolute;
+	width: 202px;
+	height: 31px;
+	left: 39px;
+	top: 303px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+
+.bottom #how-is-it{
+	position: absolute;
+	width: 195px;
+	height: 23px;
+	left: 39px;
+	top: 353px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+.bottom #comments{
+	position: absolute;
+	width: 159px;
+	height: 23px;
+	left: 38px;
+	top: 428px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+.bottom #comments-rectangle{
+	position: absolute;
+	width: 299px;
+	height: 62px;
+	left: 38px;
+	top: 451px;
+	box-sizing: border-box;}
+.bottom #watering-reminder{
+	position: absolute;
+	width: 146px;
+	height: 28px;
+	left: 38px;
+	top: 532px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+.bottom #reminder-rectangle{
+	position: absolute;
+	width: 176px;
+	height: 38px;
+	left: 38px;
+	top: 556px;
+	box-sizing: border-box;}
+.bottom #pick-time{
+	position: absolute;
+	width: 152px;
+	height: 16px;
+	left: 49px;
+	top: 565px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+
+.bottom #info-title{
+	position: absolute;
+	width: 269px;
+	height: 32px;
+	left: 45px;
+	top: 362px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.bottom #nickname-rectangle{
+	position: absolute;
+	width: 176px;
+	height: 34px;
+	left: 61px;
+	top: 355px;
+}
+
+.bottom #date-rectangle{
+	position: absolute;
+	width: 176px;
+	height: 34px;
+	left: 61px;
+	top: 440px;
+}
+
+.bottom #add-button{
+	position: absolute;
+	width: 184px;
+	height: 78px;
+	left: 191px;
+	top: 502px;
+}
+
+.bottom #date{
+	position: absolute;
+	width: 111px;
+	height: 35px;
+	left: 61px;
+	top: 408px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.bottom #nickname{
+	position: absolute;
+	width: 264px;
+	height: 37px;
+	left: 61px;
+	top: 323px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+}
+.bottom #info-text{
+	position: absolute;
+	width: 276px;
+	height: 191px;
+	left: 47px;
+	top: 410px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.bottom #seed{
+	position: absolute;
+	width: 55px;
+	height: 37px;
+	left: 93px;
+	top: 510px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.bottom #transplant{
+	position: absolute;
+	width: 101px;
+	height: 26px;
+	left: 93px;
+	top: 547px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.bottom #seed-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 61px;
+	top: 510px;
+}
+
+.bottom #transplant-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 62px;
+	top: 549px;
+
+}
+
+.bottom #bell{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 177px;
+	top: 562px;}
+
+.bottom input{
+	position: absolute;
+	width: 299px;
+	height: 62px;
+	left: 38px;
+	top: 451px;
+}
+
+
+#search-bar{
+	position: absolute;
+	width: 246px;
+	height: 43px;
+	left: 65px;
+	top: 82px;}
+
+#search-button{
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	left: 268px;
+	top: 82px;
+	}
+
+#filters{
+	position: absolute;
+	width: 78px;
+	height: 26px;
+	left: 21px;
+	top: 135px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;}
+
+
+#ferns-box {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 20px;
+	top: 171px;}
+
+#ferns{
+	position: absolute;
+	width: 63px;
+	height: 19px;
+	left: 47px;
+	top: 173px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;	
+	}
+
+#flowers-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 126px;
+	top: 171px;
+	}
+#flowers{
+	position: absolute;
+	width: 63px;
+	height: 19px;
+	left: 153px;
+	top: 173px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;
+	}
+
+#herbs-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 241px;
+	top: 171px;
+	}
+
+#herbs{
+	position: absolute;
+	width: 63px;
+	height: 19px;
+	left: 268px;
+	top: 173px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+
+#shrubs-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 20px;
+	top: 203px;}
+
+#shrubs{
+	position: absolute;
+	width: 63px;
+	height: 19px;
+	left: 47px;
+	top: 204px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;}
+
+#trees-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 126px;
+	top: 203px;
+	}
+
+#trees{
+	position: absolute;
+	width: 63px;
+	height: 19px;
+	left: 153px;
+	top: 206px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;
+	}
+
+#vegetables-box{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 241px;
+	top: 203px;
+	}
+#vegetables{
+	position: absolute;
+	width: 81px;
+	height: 30px;
+	left: 268px;
+	top: 206px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 19px;
+	}
+
+#down-arrow{
+	position: absolute;
+	width: 43px;
+	height: 43px;
+	left: 166px;
+	top: 227px;
+	}
+
+p #subtitle{
+	position: absolute;
+	width: 146px;
+	height: 28px;
+	left: 4px;
+	top: 278px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+	text-align: center;
+	}
+
+#sort-by{
+	position: absolute;
+	width: 104px;
+	height: 35px;
+	left: 253px;
+	top: 288px;
+	}
+
+.bottom #sort{
+	position: absolute;
+	width: 33px;
+	height: 35px;
+	left: 314px;
+	top: 289px;
+}
+
+.result-1 #box{
+	position: absolute;
+	width: 323px;
+	height: 107px;
+	left: 26px;
+	top: 326px;
+	z-index: 0;
+	background: #FFFFFF;
+	box-sizing: border-box;}
+.result-1 #photo{
+	position: absolute;
+	width: 102px;
+	height: 88px;
+	left: 36px;
+	top: 336px;
+	z-index: 1;}
+.result-1 #help img {
+	position: absolute;
+	width: 34px;
+	height: 38px;
+	left: 297px;
+	top: 335px;
+	z-index: 1;}
+.result-1 #add img{
+	position: absolute;
+	width: 34px;
+	height: 51px;
+	left: 297px;
+	top: 380px;
+	z-index: 1;}
+.result-1 #name{
+	position: absolute;
+	width: 107px;
+	height: 81px;
+	left: 142px;
+	top: 334px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	}
+
+
+.result-2 #box{
+	position: absolute;
+	width: 323px;
+	height: 107px;
+	left: 26px;
+	top: 447px;
+	z-index: -10;
+
+	background: #FFFFFF;
+	box-sizing: border-box;}
+.result-2 #photo{
+	position: absolute;
+	width: 102px;
+	height: 88px;
+	left: 36px;
+	top: 457px;}
+.result-2 #help img{
+	position: absolute;
+	width: 34px;
+	height: 38px;
+	left: 297px;
+	top: 456px;}
+.result-2 #name{
+	position: absolute;
+	width: 107px;
+	height: 29px;
+	left: 143px;
+	top: 457px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;}
+.result-2 #add img{
+	position: absolute;
+	width: 34px;
+	height: 51px;
+	left: 297px;
+	top: 501px;}
+
+.result-3 #box{
+	position: absolute;
+	width: 323px;
+	height: 100px;
+	left: 26px;
+	top: 568px;
+
+	background: #FFFFFF;
+	box-sizing: border-box;}
+.result-3 #photo{
+	position: absolute;
+	width: 102px;
+	height: 88px;
+	left: 36px;
+	top: 578px;}
+.result-3 #help img{
+	position: absolute;
+	width: 34px;
+	height: 38px;
+	left: 297px;
+	top: 577px;}
+.result-3 #name{
+	position: absolute;
+	width: 107px;
+	height: 29px;
+	left: 143px;
+	top: 578px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;}
+.sort-by img{
+	position: absolute;
+	width: 104px;
+	height: 35px;
+	left: 253px;
+	top: 288px;
+	}
+
+#subtitle{
+	position: absolute;
+	width: 146px;
+	height: 28px;
+	left: 4px;
+	top: 278px;
+
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 38px;
+	text-align: center;}
+
+#Okay{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	left: 289px;
+	top: 488px;
+}
+
+#help :hover{
+	background-color: purple;
+	cursor: pointer;
+}
+
+#add :hover{
+	background-color: blue;
+	cursor: pointer;
+}
+
+.view-calendar-button{
+	position: absolute;
+	width: 266.72px;
+	height: 62px;
+	left: 54px;
+	top: 600px;}

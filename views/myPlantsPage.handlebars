@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src='js/bootstrap.js'></script>
+ <script src= 'js/jquery-1.11.0.js'></script>
+  <link rel="stylesheet" href="css/myPlantsStyle.css">
+
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="header">
+     
+      <p>MY PLANTS</p>
+      
+    </div>
+
+
+    <div class="back-button">
+      <a id='back-button' href='/index'>
+      <img src='images/back-button.svg'>
+    </a>
+    </div>
+
+
+    {{#Plants}}
+        <div class="a-plant">
+
+            <a href="/plant/{{nickname}}" class="fill-div">
+
+              <div class="plantIMG">
+                <img src="/images/{{pic}}"/>
+              </div>
+
+              <div class="plantINFO">
+                <h2>{{nickname}}</h2>
+                <p>Species: {{species}}</p>
+                
+                <p>Watering: {{watering}}</p>
+              </div>
+
+            </a>
+
+        </div>
+    {{/Plants}}
+
+
+<div class="navigation">
+
+
+        <div class="footer-item">
+          <a id='home-button' href="/index">
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
+
+
+  </div>
+
+
+<script src="js/myPlantsPage.js"></script>
+<script type="app.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

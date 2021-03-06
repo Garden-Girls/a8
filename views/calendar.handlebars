@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="css/calendarStyle.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <img src="images/leaf.svg" />
+        <h1>Calendar</h1>
+        <img src="images/leaf.svg" />
+      </div>
+      
+      <div class="plantSelect">
+        <!-- hardcoded -->
+        <label for="plantDrop">Select a plant:</label>
+        <select id="plantDrop">
+          {{#Plants}}
+            <option value={{nickname}}>{{nickname}}</option>
+          {{/Plants}}
+        </select>
+      </div>
+      <!-- before CALENDAR -->
+      <div class="calendar">
+
+        <div class="month">
+          <button type="button" id="prevMon"><</button>
+          <div class="date">
+            <h1>month</h1>
+            <p>today</p>
+          </div>
+          <button type="button" id="nextMon">></button>
+        </div>
+
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+
+        <div class="days" id="calendarDays"></div>
+      </div>
+
+
+      <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
+
+      <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href='/index'>
+              <img src="images/home-button.svg">
+          </a>
+        </div>
+
+
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="images/calendar-button.svg">
+          </a>
+        </div>
+      </div>
+      
+    </div>
+    
+    <script src="js/calJS.js"></script>
+    <script type="app.js"></script>
+    
+  </body>
+</html>

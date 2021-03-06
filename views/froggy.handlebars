@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <style>textarea{resize:none;}</style>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='/js/bootstrap.js'></script>
+
+  <link rel="stylesheet" href="/css/plantStyle.css">
+  
+</head>
+<body>
+
+<!-- 
+  CAN'T ADD PHOTOS
+-->
+  <div class="container">
+    <div class="header">
+      <img id='left-leaf' src="/images/small-leaf.svg">
+      <p> MY PLANTS </p>
+      <img id='right-leaf' src="/images/small-leaf.svg">
+    </div>
+
+    <div id="prevPage">
+      <a href='/myPlantsPage'>
+      <img src='/images/back-button.svg'>
+      </a>
+    </div>
+
+    <div id="plantID">
+      <img id='journalPhoto' src="/images/{{pic}}">
+      <h2>{{nickname}}</h2>
+      <h4>{{species}}</h4>
+      <h4>{{age}} days old</h4>
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
+      <h3>Quick Journal</h3>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
+        </div>
+
+          <div class="form-group">
+            <label for="img">Add photo</label>
+            <input type="file" id="img" name="img" accept=".svg,.jpg,.png">
+            
+          </div>
+
+          <!--<div class="form-group">
+            <h3>Caption</h3>
+            <input type="text" class="form-control" id="caption" name="caption">
+          </div>-->
+
+        <div class="form-group">
+          <p>How is your plant?</p>
+          <label>
+            <input type="radio" name="buttonGroup" onclick="getMood();" value="bad" id="bad">
+            <img src="/images/bad-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" onclick="getMood();" value="okay" id="okay">
+            <img src="/images/normal-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" onclick="getMood();" value="good" id="good">
+            <img src="/images/good-face.svg">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Notes:</label>
+          <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add entry"></input>
+      </form>
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm2" role="form" method="get" action="/plant/{{nickname}}/update">
+      <h3>Plant Info</h3>
+        <div class="form-group">
+          <label for="sdate">Start Date:</label>
+          <input type="date" class="form-control" id="sdate" name="sdate" max="2021-04-01" value="{{start}}">
+        </div>
+
+        <h4>Watering Reminder</h4>
+        <div class="form-group">
+          <label for="time">Time of Day:</label>
+          <input type="time" class="form-control" id="time" name="time" value={{time}}>
+        </div>
+
+        <h4>How often:</h4>
+        <div class="form-group">
+          <label for="every day">Every day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every day">
+
+          <label for="every other day">Every other day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every other day">
+
+          <label for="every week">Every week</label>
+          <input type="radio" class="remind" id="every week" name="remind" value="every week">
+
+        </div>
+
+        
+        <input type="submit" id="submitBtn2" class="btn btn-default" value="Save Changes"></input>
+      </form>
+    </div>
+
+      
+
+    <div class="hide" id="radioVal">{{period}}</div>
+
+    <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href="/index">
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+
+<script src='/js/myPlants.js'></script>
+<script type="app.js"></script>
+</body>
+</html>

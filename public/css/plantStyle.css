@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	width: 100%;
+	overflow: none;
+}
+.header {
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 15px;
+}
+.header img {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.subheader {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+/*need to format better*/
+/*left outline for visibility*/
+#prevPage {
+	height: 25px;
+	width: 25px;
+	text-decoration: none;
+	color: black;
+	margin-left: 0;
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+input[type='radio'][name='buttonGroup'] {
+}
+
+
+/*should change to div and buttons*/
+.footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
+	border-top: 2px solid black;
+}
+
+img#journalPhoto {
+    right: 54px;
+    top: 20px;
+    margin-left: 145px;
+}
+
+.hide {
+	display:none;
+}
