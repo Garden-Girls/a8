@@ -1,0 +1,23 @@
+{
+	"Results": [
+		{	
+			"name": "basil",
+			"img": "basil.svg",
+			"info": "basil text.",
+			"tags": ["Herbs"]
+		},
+		{	
+			"name": "rosemary",
+			"img": "rosemary.svg",
+			"info": "rosemary text.",
+			"tags": ["Herbs"]
+		},
+		{	
+			"name": "orchid",
+			"img": "orchid.svg",
+			"info": "orchid text.",
+			"tags": ["Flowers"]
+		}
+	]
+}
+

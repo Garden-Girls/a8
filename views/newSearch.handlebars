@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="css/style.css">-->
+</head>
+<body>
+
+
+  <div class="page-container">
+
+    <div class= "title">
+      <img id='left-leaf' src="images/small-leaf.svg">
+      <p>ADD PLANTS</p>
+      <img id='right-leaf' src="images/small-leaf.svg">
+    </div>
+
+    <div id="searchBar">
+      <input type="text" placeholder="Search...">
+    </div>  
+
+    <div class="filters">
+      <p id='filters'>FILTERS</p>
+
+      <form>
+        <input type="checkbox" id="Ferns" name="Ferns" value="Ferns">
+        <label for="Ferns">Ferns</label>
+
+        <input type="checkbox" id="Flowers" name="Flowers" value="Flowers">
+        <label for="Flowers">Flowers</label>
+
+        <input type="checkbox" id="Herbs" name="Herbs" value="Herbs">
+        <label for="Herbs">Herbs</label>
+      </form>
+  
+    <div>
+      <p>Results</p>
+    </div>
+
+    <p>Add sorting?</p>
+
+    <div id="loadResults">
+        {{#Results}}
+          <div class="result">
+                <div class="plantIMG">
+                  <img class="resultImg" src="images/{{img}}">
+                </div>
+
+                <div class="infoButton">
+                  <a href ='/info/{{name}}'>
+                    ?
+                  </a>
+                </div>
+
+                <div class="addButton">
+                  <a href ='/editPlantPage/{{name}}'>
+                    +
+                  </a>
+                </div>
+
+                <div class="resultName">
+                  <p>{{name}}
+                </div>
+          </div>
+      {{/Results}}
+    </div>
+
+      
+    <div class='navbar'>
+      <a id='home-button' href='/index'>
+          <img src="images/home-button.svg">
+      </a>
+      <a href="/calendar">
+        <img id='calendar-button' src="images/calendar-button.svg">
+      </a>
+    </div>
+
+</div>
+
+<script type="app.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

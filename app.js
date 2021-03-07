@@ -18,7 +18,6 @@ var dayEntry = require('./routes/dayEntry');
 var stripes = require('./routes/stripes');
 var froggy = require('./routes/froggy');
 var emily =  require('./routes/emily');
-var search = require('./routes/search');
 var addPage = require('./routes/addPage');
 var filtered = require('./routes/filtered');
 var editPlantPage= require('./routes/editPlantPage');
@@ -30,6 +29,11 @@ var filteredFern = require('./routes/filteredFern');
 var loginPage = require('./routes/loginPage');
 var addPhoto = require('./routes/addPhoto');
 var basilInfoPage = require('./routes/basilInfoPage');
+
+//replace later
+var search = require('./routes/search');
+var newSearch = require('./routes/newSearch');
+//end replace
 
 //adding forms
 //var add = require('./routes/add');
@@ -70,7 +74,6 @@ app.get('/dayEntry', dayEntry.view);
 app.get('/froggy', froggy.view);
 app.get('/stripes',stripes.view);
 app.get('/emily',emily.view);
-app.get('/search', search.view);
 app.get('/addPage', addPage.view);
 app.get('/filtered',filtered.view);
 app.get('/editPlantPage',editPlantPage.view); //no species
@@ -82,6 +85,11 @@ app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
 app.get('/basilInfoPage',basilInfoPage.view);
+
+//replace later
+app.get('/search', search.view);
+app.get('/newSearch', newSearch.view);
+//end replace
 
 // Example route
 // app.get('/users', user.list);
