@@ -21,18 +21,19 @@ var emily =  require('./routes/emily');
 var addPage = require('./routes/addPage');
 var filtered = require('./routes/filtered');
 var editPlantPage= require('./routes/editPlantPage');
-var orchidInfopage = require('./routes/orchidInfopage');
-var lavenderInfopage = require('./routes/lavenderInfopage');
-var rosemaryInfopage = require('./routes/rosemaryInfopage');
 var filteredHerb = require('./routes/filteredHerb');
 var filteredFern = require('./routes/filteredFern');
 var loginPage = require('./routes/loginPage');
 var addPhoto = require('./routes/addPhoto');
-var basilInfoPage = require('./routes/basilInfoPage');
 
 //replace later
-var search = require('./routes/search');
+	//var search = require('./routes/search');
 var newSearch = require('./routes/newSearch');
+
+	//var orchidInfopage = require('./routes/orchidInfopage');
+	//var lavenderInfopage = require('./routes/lavenderInfopage');
+	//var rosemaryInfopage = require('./routes/rosemaryInfopage');
+var basilInfoPage = require('./routes/basilInfoPage');
 //end replace
 
 //adding forms
@@ -77,19 +78,21 @@ app.get('/emily',emily.view);
 app.get('/addPage', addPage.view);
 app.get('/filtered',filtered.view);
 app.get('/editPlantPage',editPlantPage.view); //no species
-app.get('/orchidInfopage',orchidInfopage.view);
-app.get('/lavenderInfopage',lavenderInfopage.view);
-app.get('/rosemaryInfopage',rosemaryInfopage.view);
 app.get('/filteredHerb',filteredHerb.view);
 app.get('/filteredFern',filteredFern.view);
 app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
-app.get('/basilInfoPage',basilInfoPage.view);
 
 //replace later
-app.get('/search', search.view);
-app.get('/newSearch', newSearch.view);
-app.get('/newSearch/search/', newSearch.searched);
+	//app.get('/search', search.view);
+app.get('/search', newSearch.view);
+app.get('/search/for/', newSearch.searched);
+
+	//app.get('/orchidInfopage',orchidInfopage.view);
+	//app.get('/lavenderInfopage',lavenderInfopage.view);
+	//app.get('/rosemaryInfopage',rosemaryInfopage.view);
+	//app.get('/basilInfoPage', basilInfoPage.view);
+app.get('/info/:species',basilInfoPage.view);
 //end replace
 
 // Example route

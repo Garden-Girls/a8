@@ -27,7 +27,20 @@ var results = [
 
 var searchedFor = document.querySelector("#getSearch").textContent;
 console.log(searchedFor);
-if (searchedFor == "All") {
+
+var noResults = document.createElement('div');
+noResults.id = "noResults";
+var noResP = document.createElement('p');
+noResP.textContent = "Sorry, there were no results that matched your search. Would you like to add a plant regardless?";
+noResults.appendChild(noResP);
+var customPlant = document.createElement('a');
+customPlant.href = "/editPlantPage/None";
+customPlant.innerHTML = "Yes";
+noResults.appendChild(customPlant);
+document.querySelector("#loadResults").appendChild(noResults);
+document.querySelector("#noResults").style.display = 'none';
+
+if (searchedFor == "All" || searchedFor == "") {
 	for (var i = 0; i < results.length; i++) {
 		var newDiv = document.createElement('div');
 		newDiv.className = "result";
@@ -123,16 +136,7 @@ else {
 		}
 	}
 	if (empty) {
-		var noResults = document.createElement('div');
-		noResults.id = "noResults";
-		var noResP = document.createElement('p');
-		noResP.textContent = "Sorry, there were no results that matched your search. Would you like to add a plant regardless?";
-		noResults.appendChild(noResP);
-		var customPlant = document.createElement('a');
-		customPlant.href = "/editPlantPage/None";
-		customPlant.innerHTML = "Yes";
-		noResults.appendChild(customPlant);
-		document.querySelector("#loadResults").appendChild(noResults);
+		document.querySelector("#noResults").style.display = '';
 	}
 }
 
@@ -141,6 +145,7 @@ var results = $('#loadResults .result');
 console.log(results);
 
 function filter() {
+	document.querySelector("#noResults").style.display = 'none';
 	for (var i = 0; i < results.length; i++) {
 		results[i].style.display = '';
 	}
@@ -177,16 +182,8 @@ function filter() {
 		}
 	}
 	if (empty) {
-		var noResults = document.createElement('div');
-		noResults.id = "noResults";
-		var noResP = document.createElement('p');
-		noResP.textContent = "Sorry, there were no results that matched your search. Would you like to add a plant regardless?";
-		noResults.appendChild(noResP);
-		var customPlant = document.createElement('a');
-		customPlant.href = "/editPlantPage/None";
-		customPlant.innerHTML = "Yes";
-		noResults.appendChild(customPlant);
-		document.querySelector("#loadResults").appendChild(noResults);
+		console.log("filteredEmpty");
+		document.querySelector("#noResults").style.display = '';
 	}
 
 }

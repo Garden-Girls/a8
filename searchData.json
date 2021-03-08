@@ -4,19 +4,25 @@
 			"name": "Basil",
 			"img": "basil.svg",
 			"info": "basil text.",
-			"tags": ["all", "Herbs"]
+			"tags": ["Herbs"]
 		},
 		{	
 			"name": "Rosemary",
 			"img": "rosemary.svg",
 			"info": "rosemary text.",
-			"tags": ["all", "Herbs"]
+			"tags": ["Herbs", "Flowers"]
 		},
 		{	
 			"name": "Orchid",
 			"img": "orchid.svg",
 			"info": "orchid text.",
-			"tags": ["all", "Flowers"]
+			"tags": ["Flowers"]
+		},
+		{	
+			"name": "testFern",
+			"img": "sunflower.svg",
+			"info": "test Fern.",
+			"tags": ["Ferns"]
 		}
 	]
 }
