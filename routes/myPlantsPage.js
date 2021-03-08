@@ -16,8 +16,6 @@ exports.view = function(req, res){
   		"pic": myPlantsData.pic,
   		"nickname": myPlantsData.nickname,
 		"species": myPlantsData.species,
-
-		"age": myPlantsData.age,
 		"Plants": myPlantsData.Plants,
 		"autoAge": ageDays,
 		"watering": myPlantsData.watering

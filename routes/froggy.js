@@ -44,28 +44,8 @@ exports.view = function(req, res){
 	start = yearS + "-" + monthS + "-" + dayS;
 
 	//formatting watering into ToD and How Often
-	var period;
-	var merid;
-	var minutes;
-	var hours;
-	if (watering != "") {
-		period = watering.substring(9);
-		hours = watering.substring(0, 2);
-		minutes = watering.substring(3, 5);
-		merid = watering.substring(6, 8);
-	}
-
-	if (merid == "AM") {
-		if (hours == 12) {
-			hours -= 12;
-		}
-	}
-	else {
-		hours += 12;
-	}
-	//!!! fix code ^ for value to default display 
-
-	var time = hours + ":" + minutes;
+	var time = myPlantsData["Plants"][ind]["tod"];
+	var period = myPlantsData["Plants"][ind]["period"];
 
   res.render('froggy', {
   	"nickname": viewPlant,

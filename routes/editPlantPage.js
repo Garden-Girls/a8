@@ -5,7 +5,7 @@ exports.view = function(req, res){
   });
 };
 
-var data = require("../myPlantsData.json");
+var myPlantsData = require("../myPlantsData.json");
 
 exports.addPlant = function(request, response) {    
 	// Your code goes here
@@ -45,10 +45,12 @@ exports.addPlant = function(request, response) { 
 		"nickname": request.query.name,
 		"species": addedSpecies,
 		"watering": watering,
+		"tod": request.query.remindTime,
+		"period": request.query.remindPer,
 		"start": outputDate
 	}
 
-	data.Plants.push(newPlant);
+	myPlantsData.Plants.push(newPlant);
 
 	response.render('editPlantPage', {
   		"species": addedSpecies
