@@ -89,6 +89,7 @@ app.get('/basilInfoPage',basilInfoPage.view);
 //replace later
 app.get('/search', search.view);
 app.get('/newSearch', newSearch.view);
+app.get('/newSearch/search/', newSearch.searched);
 //end replace
 
 // Example route

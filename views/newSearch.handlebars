@@ -11,13 +11,16 @@
   <div class="page-container">
 
     <div class= "title">
-      <img id='left-leaf' src="images/small-leaf.svg">
+      <img id='left-leaf' src="/images/small-leaf.svg">
       <p>ADD PLANTS</p>
-      <img id='right-leaf' src="images/small-leaf.svg">
+      <img id='right-leaf' src="/images/small-leaf.svg">
     </div>
 
     <div id="searchBar">
-      <input type="text" placeholder="Search...">
+      <form action="/newSearch/search/">
+        <input type="text" name="searched" placeholder="Search...">
+        <input type="submit" value="Search"></input>
+      </form>
     </div>  
 
     <div class="filters">
@@ -40,11 +43,18 @@
 
     <p>Add sorting?</p>
 
+    <p id="getSearch">{{searchedFor}}</p>
+
     <div id="loadResults">
+      <!--
         {{#Results}}
           <div class="result">
+                <div class="filterTags">
+                  <p>{{tags}}</p>
+                </div>
+
                 <div class="plantIMG">
-                  <img class="resultImg" src="images/{{img}}">
+                  <img class="resultImg" src="/images/{{img}}">
                 </div>
 
                 <div class="infoButton">
@@ -64,21 +74,22 @@
                 </div>
           </div>
       {{/Results}}
+    -->
     </div>
 
       
     <div class='navbar'>
       <a id='home-button' href='/index'>
-          <img src="images/home-button.svg">
+          <img src="/images/home-button.svg">
       </a>
       <a href="/calendar">
-        <img id='calendar-button' src="images/calendar-button.svg">
+        <img id='calendar-button' src="/images/calendar-button.svg">
       </a>
     </div>
 
 </div>
 
-<script type="app.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src='/js/newSearch.js'></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

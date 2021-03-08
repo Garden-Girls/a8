@@ -1,22 +1,22 @@
 {
 	"Results": [
 		{	
-			"name": "basil",
+			"name": "Basil",
 			"img": "basil.svg",
 			"info": "basil text.",
-			"tags": ["Herbs"]
+			"tags": ["all", "Herbs"]
 		},
 		{	
-			"name": "rosemary",
+			"name": "Rosemary",
 			"img": "rosemary.svg",
 			"info": "rosemary text.",
-			"tags": ["Herbs"]
+			"tags": ["all", "Herbs"]
 		},
 		{	
-			"name": "orchid",
+			"name": "Orchid",
 			"img": "orchid.svg",
 			"info": "orchid text.",
-			"tags": ["Flowers"]
+			"tags": ["all", "Flowers"]
 		}
 	]
 }
