@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
-  <!--<link rel="stylesheet" href="css/style.css">-->
+  <link rel="stylesheet" href="/css/searchStyle.css">
 </head>
 <body>
 
@@ -27,13 +27,13 @@
       <p id='filters'>FILTERS</p>
 
       <form>
-        <input type="checkbox" id="Ferns" name="Ferns" value="Ferns">
+        <input type="checkbox" id="Ferns" name="Ferns" value="Ferns" onclick="filter();">
         <label for="Ferns">Ferns</label>
 
-        <input type="checkbox" id="Flowers" name="Flowers" value="Flowers">
+        <input type="checkbox" id="Flowers" name="Flowers" value="Flowers" onclick="filter();">
         <label for="Flowers">Flowers</label>
 
-        <input type="checkbox" id="Herbs" name="Herbs" value="Herbs">
+        <input type="checkbox" id="Herbs" name="Herbs" value="Herbs" onclick="filter();">
         <label for="Herbs">Herbs</label>
       </form>
   
@@ -89,6 +89,7 @@
 
 </div>
 
+<script src="https://code.jquery.com/jquery.js"></script>
 <script src='/js/newSearch.js'></script>
 <script src="/js/bootstrap.min.js"></script>
 </body>
