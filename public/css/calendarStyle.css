@@ -135,7 +135,7 @@ button {
 }
 
 .today {
-	background-color: yellow;
+	background-color: gray;
 }
 
 #calendar-button{width: 46px;
@@ -174,4 +174,16 @@ a#home-button {
     height: 44px;
     top: 40px;
     left: 80px;
+}
+
+.bad {
+	background-color: red;
+}
+
+.okay {
+	background-color: yellow;
+}
+
+.good {
+	background-color: green;
 }

@@ -22,13 +22,13 @@ function renderCal() {
 	for (var i = firstDayIndex; i > 0; i--) {
 		var newDiv = document.createElement('a');
 		newDiv.innerHTML = prevLastDay - i + 1;
-		newDiv.className = 'prev-date';
+		newDiv.classList.add("prev-date");
 		if (date.getFullYear() < new Date().getFullYear()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		else if (date.getFullYear() == new Date().getFullYear() &&
 			date.getMonth() <= new Date().getMonth()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		//added test
 		if (newDiv.classList.contains('loggable')) {
@@ -59,19 +59,19 @@ function renderCal() {
 	for (var i = 1; i <= lastDay; i++) {
 		var newDiv = document.createElement('a');
 		if (date.getFullYear() < new Date().getFullYear()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		if (date.getFullYear() == new Date().getFullYear() && 
 			date.getMonth() < new Date().getMonth()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		if (date.getFullYear() == new Date().getFullYear() && 
 			date.getMonth() == new Date().getMonth() && 
 			i <= new Date().getDate()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		if (i == new Date().getDate() && date.getMonth() == new Date().getMonth() && date.getFullYear() == new Date().getFullYear()) {
-			newDiv.className += ' today';
+			newDiv.classList.add("today");
 		}
 		//added test
 		if (newDiv.classList.contains('loggable')) {
@@ -101,12 +101,12 @@ function renderCal() {
 	for (var i = 1; i <= nextDays; i++) {
 		var newDiv = document.createElement('a');
 		newDiv.innerHTML = i;
-		newDiv.className = 'next-date';
+		newDiv.classList.add("next-date");
 		if (date.getFullYear() < new Date().getFullYear()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		if (date.getFullYear() == new Date().getFullYear() && date.getMonth() < new Date().getMonth()) {
-			newDiv.className = 'loggable';
+			newDiv.classList.add("loggable");
 		}
 		//added test
 		if(newDiv.classList.contains('loggable')) {
@@ -145,11 +145,13 @@ renderCal();
 document.querySelector('#prevMon').addEventListener('click', function() {
 	date.setMonth(date.getMonth() - 1);
 	renderCal();
+	calVisual();
 });
 
 document.querySelector('#nextMon').addEventListener('click', function() {
 	date.setMonth(date.getMonth() + 1);
 	renderCal();
+	calVisual();
 });
 
 
@@ -157,4 +159,47 @@ document.querySelector('#plantDrop').onchange = function() {
 	console.log("plantChanged");
 	renderCal();
 	//rerender Cal depending on plant selected (how to get info?)
+	calVisual();
 };
+
+//make calendar show if date has existing entry, and color code based on status
+var testData = test;
+	
+function calVisual() {
+	var days = $('#calendarDays .loggable');
+	for (var i = 0; i < days.length; i++) {
+		var viewYear = date.getFullYear();
+		var viewMonth = date.getMonth() + 1;
+		if (days[i].classList.contains("prev-date")) {
+			viewMonth--;
+			if (viewMonth == 0) {
+				viewYear--;
+				viewMonth = 12;
+			}
+		}
+		if (days[i].classList.contains("next-date")) {
+			viewMonth++;
+			if (viewMonth == 13) {
+				viewYear++;
+				viewMonth = 1;
+			}
+		}
+		if (viewMonth < 10) {viewMonth = "0" + viewMonth;}
+		var viewDay = days[i].textContent;
+		if (viewDay < 10) {viewDay = "0" + viewDay;}
+		var viewDate = viewMonth + "/" + viewDay + "/" + viewYear;
+		var selectedPlant = document.querySelector('#plantDrop').value;
+		
+
+		for (var j = 0; j < testData[selectedPlant].length; j++) {
+			if (testData[selectedPlant][j]["date"] == viewDate){
+				var moodOfDay = testData[selectedPlant][j]["status"];
+				console.log(moodOfDay);
+				days[i].classList.add(moodOfDay);
+			}
+		}
+		console.log(viewDate);
+	}
+	console.log(days);
+}
+calVisual();
