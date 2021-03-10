@@ -61,11 +61,8 @@ exports.addPlant = function(request, response) { 
 		"tod": request.query.remindTime,
 		"period": request.query.remindPer,
 		"start": outputDate,
-		"age":ageDays
-	}
-
-
-
+		"autoAge":ageDays
+	};
 
 
 	myPlantsData.Plants.push(newPlant);
