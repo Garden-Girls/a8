@@ -37,8 +37,21 @@ exports.addPlant = function(request, response) { 
 	}
 
 	var watering = timeHour + " " + howOften;
+	if (watering.charAt(2)!=":"){
+		watering = "None"
+	};
 
 	var addedSpecies = request.params.species;
+
+
+	var startDate = new Date(outputDate);
+	var dateCurr = new Date(); //UTC timezone
+
+	var plantAge = dateCurr.getTime() - startDate.getTime();
+	var ageDays = plantAge/(1000 * 3600 * 24);
+	ageDays = Math.floor(ageDays);
+
+
 
 	newPlant = {
 		"pic": "emily.svg",
@@ -47,8 +60,13 @@ exports.addPlant = function(request, response) { 
 		"watering": watering,
 		"tod": request.query.remindTime,
 		"period": request.query.remindPer,
-		"start": outputDate
+		"start": outputDate,
+		"age":ageDays
 	}
+
+
+
+
 
 	myPlantsData.Plants.push(newPlant);
 
@@ -56,3 +74,5 @@ exports.addPlant = function(request, response) { 
   		"species": addedSpecies
   	});
  }
+
+

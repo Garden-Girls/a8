@@ -3,25 +3,43 @@
 		{	
 			"name": "Basil",
 			"img": "basil.svg",
-			"info": "basil text.",
+			"info": "Indirect sunlight. Water so that soil is moist but dries in between watering. Recommended watering once a day.",
 			"tags": ["Herbs"]
 		},
 		{	
 			"name": "Rosemary",
 			"img": "rosemary.svg",
-			"info": "rosemary text.",
+			"info": "Water rosemary plants evenly throughout the growing season, but be careful not to overwater. Prune regularly so that plants won't get lanky. For fresh rosemary in the winter, grow the plant indoors in a pot (or take a cutting from an outdoor plant and keep a second indoors)",
 			"tags": ["Herbs", "Flowers"]
 		},
 		{	
 			"name": "Orchid",
 			"img": "orchid.svg",
-			"info": "orchid text.",
+			"info": "Keep them moist at all times but avoid over-watering. Phalaenopsis orchids generally require brief dry periods between every watering.",
 			"tags": ["Flowers"]
 		},
-		{	
-			"name": "testFern",
+		{
+			"name": "Sunflower",
 			"img": "sunflower.svg",
-			"info": "test Fern.",
+			"info": "Plant them 1 inch deep, after the last frost, and in loamy soil with good drainage and full sun. Keep the soil moist as they are establishing themselves, but let the soil dry out between waterings once they're mature.",
+			"tags": ["Flowers"]
+		},
+		{
+			"name": "Lavender",
+			"img": "Lavender.svg",
+			"info": "Place your container grown lavender plants somewhere they receive full sun (at least 8 hours per day) and water them sparingly. Allow the soil to dry out between waterings, but don't let it get so dry that the plant wilts.",
+			"tags": ["Flowers", "Herbs"]
+		},
+		{
+			"name": "Boston Ferns",
+			"img": "boston-ferns.svg",
+			"info": "Situate Boston ferns indoors in bright, indirect sunlight away from drafty doors and heating vents. Provide as much humidity as possible and carefully monitor the soil to ensure plants stay consistently moist.",
+			"tags": ["Ferns"]
+		},
+		{
+			"name": "Lady Ferns",
+			"img": "lady-ferns.svg",
+			"info": "All Ferns thrive in light to heavy shade. A few, such as Lady Ferns (Athyrium filix-femina) will grow in full sun in the North, provided the planting site is damp. Water Ferns regularly if rain is not sufficient, and do not let the soil get completely dry.",
 			"tags": ["Ferns"]
 		}
 	]

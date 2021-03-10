@@ -24,4 +24,7 @@ exports.addPlant = function(request, response) { 
 
 	data.Plants.push(newEntry);
 	response.render('editPlantPage', data);
+
  }
+
+

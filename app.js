@@ -109,10 +109,14 @@ app.get('/editPlantPage/:species', editPlantPage.view);
 app.get('/plant/:plantName/add', froggy.addEntry);
 app.get('/plant/:plantName/update', froggy.update);
 //app.get('/addingPlant', addingPlant.addPlant);
+
 app.get('/editPlantPage/:species/add', editPlantPage.addPlant);
+//app.get('/editPlantPage/:species/add', editPlantPage.redirect);
+
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum/add', dayEntry.addEntry);
 //end testing
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+

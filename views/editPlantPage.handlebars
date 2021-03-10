@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
+
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
   <script src='/js/bootstrap.js'></script>
   <link rel="stylesheet" href="/css/style.css">
@@ -21,7 +22,7 @@
     </div>
     
     <div class="back-button">
-      <a id='back-button' href='javascript:window.history.back()'>
+      <a id='back-button' href='/search'>
       <img src='/images/back-button.svg'>
     </a>
     </div>
@@ -47,10 +48,10 @@
         </div>
 
         
-        <h4 id="one">Watering Reminder</h4>
+        <h4 id="one">(optional) Watering Reminder</h4>
         <div id="setTime" class="form-group">
           <label for="remindTime">Time of Day:</label>
-          <input type="time" class="form-control" id="remindTime" name="remindTime" required>
+          <input type="time" class="form-control" id="remindTime" name="remindTime">
         </div>
 
         <div id = "how-often" class="form-group">
@@ -67,7 +68,9 @@
 
         </div>
 
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant"></input>
+          <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant" ></input>
+
+
         <!-- doesn't display
         <label for="img">Select image:</label>
         <input type="file" id="img" name="img" accept=".svg">
@@ -76,7 +79,7 @@
       </form>
     </div>
 
-
+  <a href="/myPlantsPage"><button id='viewPlants' action='/myPlantsPage'>View All Plants</button></a>
 
 <div class='navigation'>
 
@@ -96,7 +99,7 @@
   </div>
 
 
-<script src='/js/newPlant.js'></script>
+<script src='/js/editPlantPage.js'></script>
 <script type="app.js"></script>
 </body>
 </html>
