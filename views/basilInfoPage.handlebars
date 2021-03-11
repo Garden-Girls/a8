@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Plant Info</title>
+  <link rel="stylesheet" href="/css/infoStyle.css">
 </head>
 <body>
 
@@ -11,9 +12,9 @@
   <div class="page-container">
 
     <div class="header">
-      <img id='left-leaf' src="/images/small-leaf.svg">
-      <p> MY PLANTS </p>
-      <img id='right-leaf' src="/images/small-leaf.svg">
+        <img src="/images/leaf.svg">
+        <h1>Plant Info</h1>
+        <img src="/images/leaf.svg">
     </div>
     
     <div class="back-button">
@@ -21,33 +22,42 @@
         <img src='/images/back-button.svg'>
       </a>
     </div>
-      
-    <div class='plantInfo'>
-      <div class="top">
-      <img id='journalPhoto' src="/images/{{img}}">
-        <h2>{{species}}</h2>
-      </div>
-      
-      <div class="bottom">
-        <h3>Information:</h3>
-        <p>{{info}}</p>
-      </div>
+
+    <div class="body">
+        <div class="padHead"></div>
+        <div class="top">
+          <img id='journalPhoto' src="/images/{{img}}">
+          <h2>{{species}}</h2>
+        </div>
+        
+        <div class="bottom">
+
+          <div id="infoText">
+            <h3 id="tags">Tags: {{tags}}</h3>
+            <h3>Information:</h3>
+            <p>{{info}}</p>
+          </div>
+        </div>
+
     </div>
 
+    <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href='/index'>
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
 
-    <div class='navbar'>
-      <a id='home-button' href='/index'>
-        <img src="/images/home-button.svg">
-      </a>
-
-      <a href="/calendar">
-        <img id='calendar-button' src="/images/calendar-button.svg">
-      </a>
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
     </div>
 
   </div>
 
 <script type="app.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

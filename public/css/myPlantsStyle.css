@@ -49,6 +49,7 @@
 
 .plantsList {
 	height: 80vh;
+	padding-top: 10px;
 }
 
 .padHead{
@@ -65,10 +66,13 @@ a.fill-div {
 
 
 h2 {
-	font-size: 20px;
+	font-size: 22px;
+	margin-left: 5px;
+	margin-bottom: 5px;
 }
 
 p {
+	padding-left: 10px;
 	font-size: 15px;
 }
 
@@ -82,11 +86,17 @@ p {
     padding: 10px;
     border-radius: 10px;
     border: 4px solid white;
-
 }
 
 .a-plant .plantIMG{
 	margin-right: 10px;
+	float: right;
+}
+
+.a-plant .plantIMG img{
+	border-radius: 50%;
+	border: 2.5px solid black;
+	background-color: black;
 }
 
 .a-plant .plantINFO{
