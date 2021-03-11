@@ -71,35 +71,40 @@ if (searchedFor == "All" || searchedFor == "") {
 		newDiv.appendChild(tagsDiv);
 
 		var imgDiv = document.createElement('div');
-		imgDiv.class = "plantIMG";
+		imgDiv.className = "plantIMG";
 		var img = document.createElement('img');
-		img.class = "resultImg";
+		img.className = "resultImg";
 		img.src = "/images/" + results[i].img;
 		imgDiv.appendChild(img);
 		newDiv.appendChild(imgDiv);
 
-		var infoDiv = document.createElement('div');
-		infoDiv.class = "infoButton";
-		var linkInfo = document.createElement('a');
-		linkInfo.href = "/info/" + results[i].name;
-		linkInfo.innerHTML = "?";
-		infoDiv.appendChild(linkInfo);
-		newDiv.appendChild(infoDiv);
-
-		var addDiv = document.createElement('div');
-		addDiv.class = "addButton";
-		var linkAdd = document.createElement('a');
-		linkAdd.href = "/editPlantPage/" + results[i].name;
-		linkAdd.innerHTML = "+";
-		addDiv.appendChild(linkAdd);
-		newDiv.appendChild(addDiv);
-
 		var nameDiv = document.createElement('div');
-		nameDiv.class = "resultName";
+		nameDiv.className = "resultName";
 		var nameP = document.createElement('p');
 		nameP.textContent = results[i].name;
 		nameDiv.appendChild(nameP);
 		newDiv.appendChild(nameDiv);
+
+		var buttonDiv = document.createElement('div');
+		buttonDiv.className= "buttons";
+
+		var infoDiv = document.createElement('div');
+		infoDiv.className = "infoButton";
+		var linkInfo = document.createElement('a');
+		linkInfo.href = "/info/" + results[i].name;
+		linkInfo.innerHTML = "?";
+		infoDiv.appendChild(linkInfo);
+		buttonDiv.appendChild(infoDiv);
+
+		var addDiv = document.createElement('div');
+		addDiv.className = "addButton";
+		var linkAdd = document.createElement('a');
+		linkAdd.href = "/editPlantPage/" + results[i].name;
+		linkAdd.innerHTML = "+";
+		addDiv.appendChild(linkAdd);
+		buttonDiv.appendChild(addDiv);
+
+		newDiv.appendChild(buttonDiv);
 
 		document.querySelector("#loadResults").appendChild(newDiv);
 	}
@@ -120,35 +125,40 @@ else {
 			newDiv.appendChild(tagsDiv);
 
 			var imgDiv = document.createElement('div');
-			imgDiv.class = "plantIMG";
+			imgDiv.className = "plantIMG";
 			var img = document.createElement('img');
-			img.class = "resultImg";
+			img.className = "resultImg";
 			img.src = "/images/" + results[i].img;
 			imgDiv.appendChild(img);
 			newDiv.appendChild(imgDiv);
 
-			var infoDiv = document.createElement('div');
-			infoDiv.class = "infoButton";
-			var linkInfo = document.createElement('a');
-			linkInfo.href = "/info/" + results[i].name;
-			linkInfo.innerHTML = "?";
-			infoDiv.appendChild(linkInfo);
-			newDiv.appendChild(infoDiv);
-
-			var addDiv = document.createElement('div');
-			addDiv.class = "addButton";
-			var linkAdd = document.createElement('a');
-			linkAdd.href = "/editPlantPage/" + results[i].name;
-			linkAdd.innerHTML = "+";
-			addDiv.appendChild(linkAdd);
-			newDiv.appendChild(addDiv);
-
 			var nameDiv = document.createElement('div');
-			nameDiv.class = "resultName";
+			nameDiv.className = "resultName";
 			var nameP = document.createElement('p');
 			nameP.textContent = results[i].name;
 			nameDiv.appendChild(nameP);
 			newDiv.appendChild(nameDiv);
+
+			var buttonDiv = document.createElement('div');
+			buttonDiv.className = "buttons";
+
+			var infoDiv = document.createElement('div');
+			infoDiv.className = "infoButton";
+			var linkInfo = document.createElement('a');
+			linkInfo.href = "/info/" + results[i].name;
+			linkInfo.innerHTML = "?";
+			infoDiv.appendChild(linkInfo);
+			buttonDiv.appendChild(infoDiv);
+
+			var addDiv = document.createElement('div');
+			addDiv.className = "addButton";
+			var linkAdd = document.createElement('a');
+			linkAdd.href = "/editPlantPage/" + results[i].name;
+			linkAdd.innerHTML = "+";
+			addDiv.appendChild(linkAdd);
+			buttonDiv.appendChild(addDiv);
+
+			newDiv.appendChild(buttonDiv);
 
 			document.querySelector("#loadResults").appendChild(newDiv);
 		}

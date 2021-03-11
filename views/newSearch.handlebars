@@ -10,21 +10,24 @@
 
   <div class="page-container">
 
-    <div class= "title">
-      <img id='left-leaf' src="/images/small-leaf.svg">
-      <p>ADD PLANTS</p>
-      <img id='right-leaf' src="/images/small-leaf.svg">
+    <div class="header">
+        <img src="images/leaf.svg">
+        <h1>Add Plants</h1>
+        <img src="images/leaf.svg">
     </div>
 
-    <div id="searchBar">
-      <form action="/search/for/">
-        <input type="text" name="searched" placeholder="Search...">
-        <input type="submit" value="Search"></input>
-      </form>
-    </div>  
+
+    <div class="body">
+      <div class="padHead"></div>
+      <div id="searchBar">
+        <form action="/search/for/">
+          <input type="text" name="searched" placeholder="Search...">
+          <input type="submit" value="Search"></input>
+        </form>
+      </div>  
 
     <div class="filters">
-      <p id='filters'>FILTERS</p>
+      <p id='filterT'>FILTERS</p>
 
       <form>
         <input type="checkbox" id="Ferns" name="Ferns" value="Ferns" onclick="filter();">
@@ -35,23 +38,31 @@
 
         <input type="checkbox" id="Herbs" name="Herbs" value="Herbs" onclick="filter();">
         <label for="Herbs">Herbs</label>
+
+        <input type="checkbox" id="Beginner" name="Beginner" value="Beginner" onclick="filter();">
+        <label for="Beginner">Beginner</label>
+
+        <input type="checkbox" id="Intermediate" name="Intermediate" value="Intermediate" onclick="filter();">
+        <label for="Intermediate">Intermediate</label>
+
+        <input type="checkbox" id="Advanced" name="Advanced" value="Advanced" onclick="filter();">
+        <label for="Advanced">Advanced</label>
       </form>
+    </div>
   
     <div>
       <p>Results</p>
     </div>
 
-    <p>Add sorting?</p>
+    <p class="hide">Add sorting?</p>
 
-    <p id="getSearch">{{searchedFor}}</p>
+    <p class="hide" id="getSearch">{{searchedFor}}</p>
 
     <div id="loadResults">
       <!--
         {{#Results}}
           <div class="result">
-                <div class="filterTags">
-                  <p>{{tags}}</p>
-                </div>
+                <div class="filterTags"></div>
 
                 <div class="plantIMG">
                   <img class="resultImg" src="/images/{{img}}">
@@ -70,22 +81,28 @@
                 </div>
 
                 <div class="resultName">
-                  <p>{{name}}
+                  <p>{{name}}</p>
                 </div>
           </div>
       {{/Results}}
     -->
     </div>
-
+          <div class="padHead"></div>
+  </div>
       
-    <div class='navbar'>
-      <a id='home-button' href='/index'>
-          <img src="/images/home-button.svg">
-      </a>
-      <a href="/calendar">
-        <img id='calendar-button' src="/images/calendar-button.svg">
-      </a>
-    </div>
+      <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href='/index'>
+              <img src="images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="images/calendar-button.svg">
+          </a>
+        </div>
+      </div>
 
 </div>
 

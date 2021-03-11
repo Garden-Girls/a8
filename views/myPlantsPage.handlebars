@@ -15,58 +15,56 @@
 
 
   <div class="container">
-
     <div class="header">
-     
-      <p>MY PLANTS</p>
-      
+        <img src="images/leaf.svg" />
+        <h1>My Plants</h1>
+        <img src="images/leaf.svg" />
     </div>
 
-
-    <div class="back-button">
+    <!--<div class="back-button">
       <a id='back-button' href='/index'>
-      <img src='images/back-button.svg'>
-    </a>
+        <img src='images/back-button.svg'>
+      </a>
+    </div>-->
+
+    <div class="plantsList">
+      {{#Plants}}
+          <div class="a-plant">
+
+              <a href="/plant/{{nickname}}" class="fill-div">
+
+                <div class="plantIMG">
+                  <img src="/images/{{pic}}"/>
+                </div>
+
+                <div class="plantINFO">
+                  <h2>{{nickname}}</h2>
+                  <p>Species: {{species}}</p>
+                  <p>Age: {{autoAge}} days</p>
+                  <p id="watering">Watering: {{watering}}</p>
+                </div>
+
+              </a>
+
+          </div>
+      {{/Plants}}
+      <div class="padHead"></div>
     </div>
 
 
-    {{#Plants}}
-        <div class="a-plant">
-
-            <a href="/plant/{{nickname}}" class="fill-div">
-
-              <div class="plantIMG">
-                <img src="/images/{{pic}}"/>
-              </div>
-
-              <div class="plantINFO">
-                <h2>{{nickname}}</h2>
-                <p>Species: {{species}}</p>
-                <p>Age: {{autoAge}} days</p>
-                <p id="watering">Watering: {{watering}}</p>
-              </div>
-
-            </a>
-
-        </div>
-    {{/Plants}}
-
-
-<div class="navigation">
-
-
+      <div class="footer">
         <div class="footer-item">
-          <a id='home-button' href="/index">
-              <img src="/images/home-button.svg">
+          <a id='home-button' href='/index'>
+              <img src="images/home-button.svg">
           </a>
         </div>
 
         <div class="footer-item">
           <a href="/calendar">
-          <img id='calendar-button' src="/images/calendar-button.svg">
+          <img id='calendar-button' src="images/calendar-button.svg">
           </a>
         </div>
-    </div>
+      </div>
 
 
   </div>

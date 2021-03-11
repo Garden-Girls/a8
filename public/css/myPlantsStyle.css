@@ -6,32 +6,31 @@
 }
 .container {
 	width: 100%;
-	overflow: none;
+	height: 100vh;
+	/*overflow: none;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-content: center;
 }
+
 .header {
 	width: 100%;
+	height: 10vh;
 	padding: 15px;
 	display: flex;
 	justify-content: space-around;
 	font-size: 15px;
+	position: fixed;
+	top: 0;
+	background-color: green;
 }
+
 .header img {
 	margin-left: 40px;
 	margin-right: 40px;
 }
-
-
-a.fill-div {
-	display: block;
-	height: 100%;
-	width: 100%;
-	text-decoration: none;
-	color: black;
-}
-
+/*
 .header p{
 	position: absolute;
 	width: 211px;
@@ -46,7 +45,24 @@ a.fill-div {
 	line-height: 38px;
 	text-align: center;
 	align-items: center;
-}	
+}*/
+
+.plantsList {
+	height: 80vh;
+}
+
+.padHead{
+	height: 10vh;
+}
+
+a.fill-div {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: black;
+}
+
 
 h2 {
 	font-size: 20px;
@@ -57,35 +73,38 @@ p {
 }
 
 .a-plant {
+	margin: auto;
     background-color: #3ba7207a;
-    width: 100%;
-    outline: 2px solid darkgreen;
-    height: 180px;
+    width: 95%;
+ 	height: 120px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid white;
+
 }
 
-.navigation {
-    width: 375px;
-    height: 58px;
+.a-plant .plantIMG{
+	margin-right: 10px;
 }
 
-.header img {
-    margin-left: -45px;
-    margin-right: 40px;
+.a-plant .plantINFO{
+	padding-top: 5px;
+}
+.a-plant div {
+	margin: auto;
+	float: left;
 }
 
-#home-button{
-	position: absolute;
-	width:46px;
-	height: 37.82px;
-	top: 790px;
-	left: 40px;
 
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
-
-#calendar-button{
-	position: absolute;
-	width:46px;
-	height: 37.82px;
-	top: 795px;
-	left: 200px;
+.footer {
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
+	border-top: 2px solid black;
+	background-color: white;
 }
