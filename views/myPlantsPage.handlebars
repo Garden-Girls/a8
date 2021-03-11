@@ -33,16 +33,17 @@
 
               <a href="/plant/{{nickname}}" class="fill-div">
 
-                <div class="plantIMG">
-                  <img src="/images/{{pic}}"/>
-                </div>
-
                 <div class="plantINFO">
                   <h2>{{nickname}}</h2>
                   <p>Species: {{species}}</p>
                   <p>Age: {{autoAge}} days</p>
                   <p id="watering">Watering: {{watering}}</p>
                 </div>
+
+              <div class="plantIMG">
+                <img src="/images/{{img}}" alt="Image not found" onerror="this.onerror=null;this.src='/images/{{species}}.svg'"/>
+              </div>
+
 
               </a>
 
