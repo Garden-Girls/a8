@@ -73,7 +73,7 @@ h2 {
 
 p {
 	padding-left: 10px;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 .a-plant {
@@ -89,7 +89,7 @@ p {
 }
 
 .a-plant .plantIMG{
-	margin-right: 10px;
+	margin-right: 5px;
 	float: right;
 }
 
@@ -101,6 +101,7 @@ p {
 
 .a-plant .plantINFO{
 	padding-top: 5px;
+	max-width: 70%;
 }
 .a-plant div {
 	margin: auto;

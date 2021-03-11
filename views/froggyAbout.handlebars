@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <title>{{nickname}}</title>
   <style>textarea{resize:none;}</style>
 
   <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
@@ -18,9 +19,9 @@
 -->
   <div class="container">
       <div class="header">
-        <img src="/images/leaf.svg" />
+        <img src="/images/leaf.svg">
         <h1>My Plants</h1>
-        <img src="/images/leaf.svg" />
+        <img src="/images/leaf.svg">
       </div>
 
     <div id="prevPage">
@@ -37,54 +38,41 @@
     </div>
 
     <div class="tabs">
-      <button class="tab selectedTab">Quick Journal</button>
-      <button class="tab" onclick="goInfo()">About {{nickname}}</button>
+      <button class="tab" onclick="goJournal()">Quick Journal</button>
+      <button class="tab selectedTab">About {{nickname}}</button>
     </div>
-
+    
     <div class="input">
-      <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
+      <form id="addEntryForm2" role="form" method="get" action="/plant/{{nickname}}/update">
         <div class="form-group">
-          <label for="date">Date:</label>
-          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
+          <label for="date">Start Date:</label>
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" value="{{start}}">
         </div>
 
-          <div class="form-group">
-            <label for="img">Add photo</label>
-            <input type="file" id="img" name="img" accept=".svg,.jpg,.png">
-            
-          </div>
-
-          <!--<div class="form-group">
-            <h3>Caption</h3>
-            <input type="text" class="form-control" id="caption" name="caption">
-          </div>-->
-
+        <h4>Watering Reminder</h4>
         <div class="form-group">
-          <p>How is your plant?</p>
-          <label>
-            <input type="radio" name="buttonGroup" onclick="getMood();" value="bad" id="bad">
-            <img src="/images/bad-face.svg">
-          </label>
-
-          <label>
-            <input type="radio" name="buttonGroup" onclick="getMood();" value="okay" id="okay">
-            <img src="/images/normal-face.svg">
-          </label>
-
-          <label>
-            <input type="radio" name="buttonGroup" onclick="getMood();" value="good" id="good">
-            <img src="/images/good-face.svg">
-          </label>
+          <label for="time">Time of Day:</label>
+          <input type="time" class="form-control" id="time" name="time" value={{time}}>
         </div>
 
+        <h4>How often:</h4>
         <div class="form-group">
-          <label for="description">Notes:</label>
-          <input type="text" class="form-control" id="description" name="description">
+          <label for="every day">Every day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every day">
+
+          <label for="every other day">Every other day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every other day">
+
+          <label for="every week">Every week</label>
+          <input type="radio" class="remind" id="every week" name="remind" value="every week">
+
         </div>
-        <input type="submit" id="submitBtn" class="btn btn-default" value="Add entry"></input>
+
+        
+        <input type="submit" id="submitBtn2" class="btn btn-default" value="Save Changes"></input>
       </form>
     </div>
-
+      
     <div class="hide" id="radioVal">{{period}}</div>
 
     <div class="footer">

@@ -16,7 +16,10 @@ var calendar = require('./routes/calendar');
 var bert = require('./routes/bert');
 var dayEntry = require('./routes/dayEntry');
 var stripes = require('./routes/stripes');
+
 var froggy = require('./routes/froggy');
+var froggyAbout = require('./routes/froggyAbout');
+
 var emily =  require('./routes/emily');
 var addPage = require('./routes/addPage');
 var filtered = require('./routes/filtered');
@@ -101,13 +104,15 @@ app.get('/info/:species',basilInfoPage.view);
 //testing diff entries
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum', dayEntry.view);
 app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
-app.get('/plant/:plantName', froggy.view);
 app.get('/editPlantPage/:species', editPlantPage.view);
 
 //adding to JSON
 //app.get('/add', add.addEntry);
+app.get('/plant/:plantName', froggy.view);
 app.get('/plant/:plantName/add', froggy.addEntry);
-app.get('/plant/:plantName/update', froggy.update);
+
+app.get('/plant/:plantName/update', froggyAbout.update);
+app.get('/plant/:plantName/about', froggyAbout.view);
 //app.get('/addingPlant', addingPlant.addPlant);
 
 app.get('/editPlantPage/:species/add', editPlantPage.addPlant);

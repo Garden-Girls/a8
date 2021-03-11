@@ -4,7 +4,6 @@ console.log(today);
 $("#date")[0].setAttribute('max', today);
 
 //document.getElementsByName("sdate")[0].setAttribute('max', today);
-$("#sdate")[0].setAttribute('max', today);
 
 //select radiobutton for watering period
 var period = document.querySelector('#radioVal').textContent;
@@ -31,3 +30,12 @@ function getMood(){
 
 getMood();
 
+function goInfo() {
+	var nickname = document.querySelector('#getNickname').textContent;
+	window.location.href = "/plant/" + nickname + "/about";
+}
+
+function goJournal() {
+	var nickname = document.querySelector('#getNickname').textContent;
+	window.location.href = "/plant/" + nickname;
+}
