@@ -1,7 +1,11 @@
 exports.view = function(req, res){
 	var addedSpecies = req.params.species;
+	var addedimg = req.params.img;
+
+
   res.render('editPlantPage', {
-  	"species": addedSpecies
+  	"species": addedSpecies,
+  	"img":addedimg
   });
 };
 
@@ -42,7 +46,7 @@ exports.addPlant = function(request, response) { 
 	};
 
 	var addedSpecies = request.params.species;
-
+	var addedimg = request.params.img;
 
 	var startDate = new Date(outputDate);
 	var dateCurr = new Date(); //UTC timezone
@@ -54,7 +58,7 @@ exports.addPlant = function(request, response) { 
 
 
 	newPlant = {
-		"pic": "emily.svg",
+		"img": addedimg,
 		"nickname": request.query.name,
 		"species": addedSpecies,
 		"watering": watering,
@@ -68,8 +72,10 @@ exports.addPlant = function(request, response) { 
 	myPlantsData.Plants.push(newPlant);
 
 	response.render('editPlantPage', {
-  		"species": addedSpecies
+  		"species": addedSpecies,
+  		"img":addedimg
   	});
  }
+
 
 

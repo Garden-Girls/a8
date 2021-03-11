@@ -21,7 +21,7 @@ var myPlantsData = require("../myPlantsData.json")
   
 
   res.render('myPlantsPage', {
-  		"pic": myPlantsData.pic,
+  		"img": myPlantsData.species,
   		"nickname": myPlantsData.nickname,
 		"species": myPlantsData.species,
 		"Plants": myPlantsData.Plants,
