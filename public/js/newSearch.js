@@ -49,12 +49,14 @@ console.log(searchedFor);
 var noResults = document.createElement('div');
 noResults.id = "noResults";
 var noResP = document.createElement('p');
-noResP.textContent = "Sorry, there were no results that matched your search. Would you like to add a plant regardless?";
+noResP.textContent = "Sorry, there were no results that matched your search. Would you like to add a plant anyway?";
 noResults.appendChild(noResP);
+var cusButton = document.createElement('div');
 var customPlant = document.createElement('a');
 customPlant.href = "/editPlantPage/None";
 customPlant.innerHTML = "Yes";
-noResults.appendChild(customPlant);
+cusButton.appendChild(customPlant);
+noResults.appendChild(cusButton);
 document.querySelector("#loadResults").appendChild(noResults);
 document.querySelector("#noResults").style.display = 'none';
 
@@ -197,6 +199,30 @@ function filter() {
 	if (document.getElementById('Herbs').checked) {
 		for (var i = 0; i < results.length; i++) {
 			if ((results[i].querySelector('.filterTags').classList.contains("Herbs")) == false){
+				results[i].style.display = 'none';
+			}
+		}
+	}
+
+	if (document.getElementById('Beginner').checked) {
+		for (var i = 0; i < results.length; i++) {
+			if (results[i].querySelector('.filterTags').classList.contains("Beginner") == false){
+				results[i].style.display = 'none';
+			}
+		}
+	}
+
+	if (document.getElementById('Intermediate').checked) {
+		for (var i = 0; i < results.length; i++) {
+			if ((results[i].querySelector('.filterTags').classList.contains("Intermediate")) == false){
+				results[i].style.display = 'none';
+			}
+		}
+	}
+
+	if (document.getElementById('Advanced').checked) {
+		for (var i = 0; i < results.length; i++) {
+			if ((results[i].querySelector('.filterTags').classList.contains("Advanced")) == false){
 				results[i].style.display = 'none';
 			}
 		}

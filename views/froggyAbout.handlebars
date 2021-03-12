@@ -20,20 +20,21 @@
   <div class="container">
       <div class="header">
         <img src="/images/leaf.svg">
-        <h1>My Plants</h1>
+        <h1 id="getNickname">{{nickname}}</h1>
         <img src="/images/leaf.svg">
       </div>
 
+      <!--
     <div id="prevPage">
       <a href='/myPlantsPage'>
       <img src='/images/back-button.svg'>
       </a>
-    </div>
+    </div>  -->
+
 
     <div id="plantID">
-      <h2 id="getNickname">{{nickname}}</h2>
       <img id='journalPhoto' src="/images/{{nickname}}.svg" alt="Image not found" onerror="this.onerror=null;this.src='/images/{{species}}.svg'"/>
-      <h4>{{species}}</h4>
+      <h4 class="ital">{{species}}</h4>
       <h4>{{age}} days old</h4>
     </div>
 

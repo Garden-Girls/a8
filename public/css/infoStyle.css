@@ -4,13 +4,6 @@
 	box-sizing: border-box;
 	
 }
-.container {
-	width: 100%;
-	height: 100vh;
-	/*overflow: none;*/
-	display: flex;
-	flex-direction: column;
-}
 
 .header {
 	width: 100%;

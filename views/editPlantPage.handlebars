@@ -15,15 +15,15 @@
   <div class="page-container">
 
     <div class="header">
-        <img src="/images/leaf.svg" />
-        <h1>Add Plant</h1>
-        <img src="/images/leaf.svg" />
+        <img src="/images/leaf.svg">
+        <h1>Add Plants</h1>
+        <img src="/images/leaf.svg">
     </div>
     
     <div class="back-button">
       <a id='back-button' href='/search'>
-      <img src='/images/back-button.svg'>
-    </a>
+        <img src='/images/back-button.svg'>
+      </a>
     </div>
 
     
@@ -36,7 +36,7 @@
         
         <div class="form-group" id='nickname'>
           <label for="name">Nickname:</label>
-          <input type="text" class="form-control" id="name" name="name" required></div>
+          <input type="text" class="form-control" id="name" name="name" required>
         </div>
 
         <label id='species' for='name'>Species: {{species}}</label>
@@ -63,7 +63,7 @@
           <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">
           <br>
           <label for="Every week">Every week</label>
-          <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week"></div>
+          <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week">
 
         </div>
 
@@ -78,7 +78,9 @@
       </form>
     </div>
 
-  <a href="/myPlantsPage"><button id='viewPlants' action='/myPlantsPage'>View All Plants</button></a>
+    
+    <a href="/myPlantsPage"><button id='viewPlants' action='/myPlantsPage'>View All Plants</button></a>
+    
 
       <div class="footer">
         <div class="footer-item">
@@ -98,7 +100,6 @@
   </div>
 
 <script src="/js/newPlant.js"></script>
-<script src='./routes/editPlantPage.js'></script>
 <script type="app.js"></script>
 </body>
 </html>
