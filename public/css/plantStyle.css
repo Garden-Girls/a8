@@ -83,12 +83,17 @@ h2 {
 	background-color: #4CAF50;
 	border: none;
 	color: white;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
 	border-radius: 10px 10px 0px 0px;
+	max-width: 50%;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .selectedTab {
@@ -99,13 +104,59 @@ h2 {
 .input {
 	background-color: LightGray;
 	width: 92%;
-	height: 45vh;
+	height: 45%;
 	border-radius: 0px 15px 5px 15px;
 	margin: 0px auto 13vh auto;
-	padding: 10px;
 }
 
+#addEntryForm {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
+h4 {
+	margin-bottom: 10px;
+}
+label {
+	margin-right: 5px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.ital{
+	font-style: italic;
+}
+input[type="text"] {
+	width: 70%;
+}
+
+input[type="submit"] {
+	width: 35%;
+	margin-top: 5px;
+	margin-left: 60%;
+}
+
+.form-group {
+	font-size: 15px;
+}
+
+#moodButtons {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#periodButtons {
+	padding-left: 20px;
+}
 /*should change to div and buttons*/
 .footer {
 	width: 100%;

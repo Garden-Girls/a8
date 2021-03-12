@@ -44,29 +44,31 @@
     </div>
     
     <div class="input">
-      <form id="addEntryForm2" role="form" method="get" action="/plant/{{nickname}}/update">
+      <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/update">
         <div class="form-group">
-          <label for="date">Start Date:</label>
+          <label class="bold" for="date">Start Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01" value="{{start}}">
         </div>
 
-        <h4>Watering Reminder</h4>
+        
         <div class="form-group">
-          <label for="time">Time of Day:</label>
+          <h4>Watering Reminder</h4>
+          <label class="ital" for="time">Time of Day:</label>
           <input type="time" class="form-control" id="time" name="time" value={{time}}>
         </div>
 
-        <h4>How often:</h4>
         <div class="form-group">
-          <label for="every day">Every day</label>
+          <p class="ital">How Often:</p>
+          <div id="periodButtons">
           <input type="radio" class="remind" id="every day" name="remind" value="every day">
-
-          <label for="every other day">Every other day</label>
+          <label for="every day">Every day</label>
+          <br/>
           <input type="radio" class="remind" id="every day" name="remind" value="every other day">
-
-          <label for="every week">Every week</label>
+          <label for="every other day">Every other day</label>
+          <br/>
           <input type="radio" class="remind" id="every week" name="remind" value="every week">
-
+          <label for="every week">Every week</label>
+          </div>
         </div>
 
         

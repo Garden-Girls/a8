@@ -43,17 +43,18 @@
     <div class="input">
       <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
         <div class="form-group">
-          <label for="date">Date:</label>
+          <label class="bold" for="date">Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
         </div>
 
           <div class="form-group">
-            <label for="img">Add photo</label>
+            <label class="bold" for="img">Add photo</label>
             <input type="file" id="img" name="img" accept=".svg,.jpg,.png">     
           </div>
 
         <div class="form-group">
-          <p>How is your plant?</p>
+          <p class="bold">How is your plant?</p>
+          <div id="moodButtons">
           <label>
             <input type="radio" name="buttonGroup" onclick="getMood();" value="bad" id="bad">
             <img src="/images/bad-face.svg">
@@ -68,10 +69,11 @@
             <input type="radio" name="buttonGroup" onclick="getMood();" value="good" id="good">
             <img src="/images/good-face.svg">
           </label>
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="description">Notes:</label>
+          <label class="bold" for="description">Notes:</label>
           <input type="text" class="form-control" id="description" name="description">
         </div>
         <input type="submit" id="submitBtn" class="btn btn-default" value="Add entry"></input>
