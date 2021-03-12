@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <title>Plant Info</title>
+  <link rel="stylesheet" href="/css/infoStyle.css">
+</head>
+<body>
+
+
+  <div class="page-container">
+
+    <div class="header">
+        <img src="/images/leaf.svg">
+        <h1>Add Plants</h1>
+        <img src="/images/leaf.svg">
+    </div>
+    
+    <!--
+    <div class="back-button">
+      <a id='back-button' href='javascript:window.history.back()'>
+        <img src='/images/back-button.svg'>
+      </a>
+    </div> -->
+
+    <div id="body">
+      <div class="top">
+          <img id="flower" src="/images/{{species}}.svg">
+      </div>
+        
+        <div class="bottom">
+
+          <form id="addEntryForm" role="form" method="get" action="/editPlantPage/{{species}}/add">
+        
+            <div class="form-group" id='nickname'>
+              <label for="name">Nickname:</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <label id='species' for='name'>Species: {{species}}</label>
+            
+            <div id='start-date' class="form-group">
+              <label for="date">Start Date:</label>
+              <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
+            </div>
+
+            
+            <h4 id="one">(optional) Watering Reminder</h4>
+            <div id="setTime" class="form-group">
+              <label for="remindTime">Time of Day:</label>
+              <input type="time" class="form-control" id="remindTime" name="remindTime">
+            </div>
+
+            
+            <h4>How often:</h4>
+            <div class="form-group">
+              <label for="Every day">Every day</label>
+              <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day" checked>
+
+              <label for="Every other day">Every other day</label>
+              <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">
+              <br>
+              <label for="Every week">Every week</label>
+              <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week">
+
+            </div>
+
+              <input type="submit" id="submitBtn" class="btn btn-default" value="Add plant" ></input>
+
+          </form>
+        </div>
+
+      </div>
+
+
+    <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href='/index'>
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+<script type="app.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,106 +1,67 @@
-*{
-    position: relative;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#nickname {
-    position: absolute;
-    width: 265.5px;
-    height: 26.46px;
-    left: 59px;
-    top: 136.05px;
+.header {
+    width: 100%;
+    height: 10vh;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    background-color: green;
 }
 
-
-
-div#start-date {
-    position: absolute;
-    width: 312.5px;
-    height: 28.46px;
-    left: 58px;
-    top: 279.05px;
-}
-#watering h4 {
-    position: absolute;
-    width: 184.5px;
-    height: 26.46px;
-    left: 77px;
-    top: 48.05px;
+.header img {
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
-#watering{
-    position: absolute;
-    width: 351.5px;
-    height: 257.46px;
-    left: 10px;
-    top: 210.05px;
-}
-#how-often {
-    position: absolute;
-    width: 351.5px;
-    height: 257.46px;
-    left: 58px;
-    top: 294.05px;
+#body {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-#submitBtn {
-    position: absolute;
-    left: 102px;
-    top: 561.05px;
-    width: 143.05px;
-    height: 37px;
+.image {
+    margin-top: 10vh;
+    padding-top: 10px;
 }
 
-p{
-    top: 500.05px;
+.image img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: black;
 }
 
-
-img#flower {
-    max-width: 140px;
-    max-height: 160px;
-    top: 127px;
-    left: 109px;
+.input {
+    width: 90%;
+    height: 50%;
+    background-color: LightGray;
+    margin: 0 auto 0 auto;
+    border-radius: 25px;
+    padding: 15px;
 }
 
-div#setTime {
-    top: 205px;
-    width: 350px;
-    left: 47px;
-    height: 23px;
+.footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid black;
+    background-color: white;
 }
 
-div#start-date {
-    top: 279px;
-}
-
-
-div#watering {
-    top: 264px;
-}
-
-div#how-often {
-    top: 450px;
-}
-
-div#setTime {
-    top: 265px;
-}
-
-label#species {
-    top: 190px;
-    left: 58px;
-}
-
-div#start-date {
-    top: 305px;
-}
-
-h4#one {
-    top: 245px;
-    left: 100px;
-}
-
-input#species {
-    top: 187px;
-    left: 81px;
-}
