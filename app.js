@@ -18,8 +18,6 @@ var dayEntry = require('./routes/dayEntry');
 var froggy = require('./routes/froggy');
 var froggyAbout = require('./routes/froggyAbout');
 
-var addPage = require('./routes/addPage');
-var filtered = require('./routes/filtered');
 var editPlantPage= require('./routes/editPlantPage');
 var loginPage = require('./routes/loginPage');
 var addPhoto = require('./routes/addPhoto');
@@ -30,12 +28,7 @@ var newSearch = require('./routes/newSearch');
 var basilInfoPage = require('./routes/basilInfoPage');
 //end replace
 
-//adding forms
-//var add = require('./routes/add');
-var addingPlant = require('./routes/addingPlant');
 
-// Example route
-// var user = require('./routes/user');
 
 var app = express();
 
@@ -65,7 +58,7 @@ app.get('/index', index.view);
 app.get('/myPlantsPage', myPlantsPage.view);
 app.get('/calendar', calendar.view);
 app.get('/dayEntry', dayEntry.view);
-app.get('/addPage', addPage.view);
+
 app.get('/editPlantPage',editPlantPage.view); //no species
 app.get('/loginPage', loginPage.view);
 app.get('/addPhoto', addPhoto.view);
@@ -86,13 +79,11 @@ app.get('/addPhoto/:plantName/:monthNum/:dayNum/:yearNum', addPhoto.view);
 app.get('/editPlantPage/:species', editPlantPage.view);
 
 //adding to JSON
-//app.get('/add', add.addEntry);
 app.get('/plant/:plantName', froggy.view);
 app.get('/plant/:plantName/add', froggy.addEntry);
 
 app.get('/plant/:plantName/update', froggyAbout.update);
 app.get('/plant/:plantName/about', froggyAbout.view);
-//app.get('/addingPlant', addingPlant.addPlant);
 
 app.get('/editPlantPage/:species/add', editPlantPage.addPlant);
 //app.get('/editPlantPage/:species/add', editPlantPage.redirect);

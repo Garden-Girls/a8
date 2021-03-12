@@ -93,9 +93,13 @@ p {
 }
 
 .a-plant .plantIMG img{
+	height: 104px;
+	width: 104px;
 	border-radius: 50%;
 	border: 2.5px solid black;
 	background-color: black;
+	display: block;
+	margin: auto;
 }
 
 .a-plant .plantINFO{
