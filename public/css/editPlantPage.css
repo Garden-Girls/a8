@@ -134,3 +134,7 @@ input[type="submit"] {
     pointer-events: none;
     opacity: 50%;
 }
+
+.hide {
+    display: none;
+}

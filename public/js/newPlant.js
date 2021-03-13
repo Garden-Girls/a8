@@ -13,10 +13,12 @@ if (url.indexOf("/add?name=") == -1) {
 	}
 }
 else {
-
-	if (document.querySelector("#viewPlants").classList.contains('disabled') == true) {
-		document.querySelector("#viewPlants").classList.remove('disabled');
-	}
+    document.querySelector("#viewPlants").classList.add('disabled');
+    if(document.querySelector('#getUnique').textContent == "true") {
+    	if (document.querySelector("#viewPlants").classList.contains('disabled') == true) {
+    		document.querySelector("#viewPlants").classList.remove('disabled');
+    	}
+    }
 }
 
 
