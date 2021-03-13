@@ -2,15 +2,6 @@
 {
 	"Plants": [
 		{	
-			"img": "Stripes.svg",
-			"nickname": "Stripes",
-			"species": "Philodendron",
-			"watering": "07:00 AM every day",
-			"tod": "07:00",
-			"period": "every day",
-			"start": "01/01/2021"
-		},
-		{	
 			"img": "Froggy.svg",
 			"nickname": "Froggy",
 			"species": "Nephthytis",

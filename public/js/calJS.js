@@ -60,6 +60,9 @@ function renderCal() {
 			date.getMonth() <= new Date().getMonth()) {
 			newDiv.classList.add("loggable");
 		}
+		else {
+			newDiv.classList.add("notLog");
+		}
 		//added test
 		if (newDiv.classList.contains('loggable')) {
 			var formatYear = date.getFullYear();
@@ -90,14 +93,17 @@ function renderCal() {
 		if (date.getFullYear() < new Date().getFullYear()) {
 			newDiv.classList.add("loggable");
 		}
-		if (date.getFullYear() == new Date().getFullYear() && 
+		else if (date.getFullYear() == new Date().getFullYear() && 
 			date.getMonth() < new Date().getMonth()) {
 			newDiv.classList.add("loggable");
 		}
-		if (date.getFullYear() == new Date().getFullYear() && 
+		else if (date.getFullYear() == new Date().getFullYear() && 
 			date.getMonth() == new Date().getMonth() && 
 			i <= new Date().getDate()) {
 			newDiv.classList.add("loggable");
+		}
+		else {
+			newDiv.classList.add("notLog");
 		}
 		if (i == new Date().getDate() && date.getMonth() == new Date().getMonth() && date.getFullYear() == new Date().getFullYear()) {
 			newDiv.classList.add("today");
@@ -134,8 +140,11 @@ function renderCal() {
 		if (date.getFullYear() < new Date().getFullYear()) {
 			newDiv.classList.add("loggable");
 		}
-		if (date.getFullYear() == new Date().getFullYear() && date.getMonth() < new Date().getMonth()) {
+		else if (date.getFullYear() == new Date().getFullYear() && date.getMonth() < new Date().getMonth()) {
 			newDiv.classList.add("loggable");
+		}
+		else {
+			newDiv.classList.add("notLog");
 		}
 		//added test
 		if(newDiv.classList.contains('loggable')) {

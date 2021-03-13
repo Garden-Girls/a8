@@ -47,18 +47,21 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	border-radius: 10px;
 }
 
 #plantDrop {
-	width: 100px;
+	width: 40%;
 	height: 30px;
 }
 
 /*calendar*/
 .calendar {
 	width: 85%;
-	height: 58.5%;
-	outline: 2px solid black;
+	height: 62%;
+	border-radius: 10px 10px 0 0;
+	background-color: white;
 }
 
 .month {
@@ -93,7 +96,6 @@ button {
 .weekdays {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	grid-gap: 1px;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 }
@@ -104,8 +106,8 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.2s;
-	outline: 2px solid black;
+	border: 1px solid green;
+	background-color: #3ba7207a;
 }
 
 .days {
@@ -117,31 +119,31 @@ button {
 .days a {
 	font-size: 1.2rem;
 	text-decoration: none;
+	color: black;
 	height: 51px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.2s;
 	/*change color depending on entry*/
-	outline: 1px solid black;
-}
-
-.days a:hover:not(.today) {
-	background-color: blue;
-	cursor: pointer;
-}
-
-.prev-date, .next-date {
-	opacity: 0.5;
+	border: 0.5px solid #cccccc;
 }
 
 .loggable {
-	font-weight: bold;
-	background-color: #ccffb3;
+	background-color: white;
+}
+
+.notLog{
+	background-color: #bfbfbf;
+}
+
+.prev-date, .next-date {
+	background-color: gray;
+	font-weight: normal;
+	filter: grayscale(50%);
 }
 
 .today {
-	background-color: SlateGray;
+	filter: drop-shadow(0px 0px 3px #00cc00);
 }
 
 .footer {
@@ -159,13 +161,17 @@ button {
 	margin: auto 0;
 }
 .bad {
-	background-color: red;
+	background-color: #ff6666;
 }
 
 .okay {
-	background-color: yellow;
+	background-color: #ffff99;
 }
 
 .good {
-	background-color: green;
+	background-color: #85e085;
+}
+
+.hide {
+	display:none;
 }

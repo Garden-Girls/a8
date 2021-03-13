@@ -42,12 +42,6 @@
 			"info": "All Ferns thrive in light to heavy shade. A few, such as Lady Ferns (Athyrium filix-femina) will grow in full sun in the North, provided the planting site is damp. Water Ferns regularly if rain is not sufficient, and do not let the soil get completely dry.",
 			"tags": ["Ferns","Intermediate"]
 		},
-		{
-			"name": "Philodendron",
-			"img": "Stripes.svg",
-			"info": "Thrives in medium indirect light, but can tolerate low indirect light. Water every 1-2 weeks, allowing soil to dry out between waterings. Any humidity level will do, but moist air will help lead to larger leaves and faster growth.",
-			"tags": ["Herbs", "Beginner"]
-		},
 
 		{
 			"name": "Nephthytis",
