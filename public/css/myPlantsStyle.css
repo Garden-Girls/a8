@@ -117,5 +117,8 @@ p {
 	margin: auto 0;
 }
 
+.hide {
+	display: none;
+}
 
 
