@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name='viewport' content="width=device-width, initial-scale=1.0">
     <title>Journal</title>
-    <link rel="stylesheet" href="css/calendarStyle.css">
+    <link rel="stylesheet" href="/css/calendarStyle.css">
   </head>
 
   <body>
@@ -12,11 +12,17 @@
     <div class="container">
 
       <div class="header">
-        <img src="images/leaf.svg" />
+        <img src="/images/leaf.svg" />
         <h1>Journal</h1>
-        <img src="images/leaf.svg" />
+        <img src="/images/leaf.svg" />
       </div>
       
+      <div class="hide">
+        <p id="getViewPlant">{{viewPlant}}</p>
+        <p id="getFirstLoggable">{{firstLoggable}}</p>
+        <p id="getDailyStats">{{dailyStats}}</p>
+      </div>
+
       <div class="plantSelect">
         <!-- hardcoded -->
         <label for="plantDrop">Select a plant:</label>
@@ -54,19 +60,19 @@
       <div class="footer">
         <div class="footer-item">
           <a id='home-button' href='/index'>
-              <img src="images/home-button.svg">
+              <img src="/images/home-button.svg">
           </a>
         </div>
 
     <div class="footer-item">
                 <a id='plant-button' href='/myPlantsPage'>
-                    <img src="images/plant-button.svg">
+                    <img src="/images/plant-button.svg">
               </a>
               </div> 
         
         <div class="footer-item">
           <a href="/calendar">
-          <img id='calendar-button' src="images/calendar-button.svg">
+          <img id='calendar-button' src="/images/calendar-button.svg">
           </a>
         </div>
       </div>
@@ -74,8 +80,7 @@
     </div>
     
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="js/dataJS.js"></script>
-    <script src="js/calJS.js"></script>
+    <script src="/js/calJS.js"></script>
     <script type="app.js"></script>
     
   </body>

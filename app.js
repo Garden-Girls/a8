@@ -56,7 +56,10 @@ app.get('/',loginPage.view);
 app.get('/index', index.view);
 
 app.get('/myPlantsPage', myPlantsPage.view);
+
 app.get('/calendar', calendar.view);
+app.get('/calendar/:nickname', calendar.view);
+
 app.get('/dayEntry', dayEntry.view);
 
 app.get('/editPlantPage',editPlantPage.view); //no species

@@ -1,7 +1,7 @@
 const date = new Date(); //today's date
 
 function renderCal() {
-	var selectedPlant = document.querySelector('#plantDrop').value;
+	var selectedPlant = document.querySelector('#getViewPlant').textContent;
 	console.log(selectedPlant);
 
 	const months = ["January", "February", "March", "April", "May", "June", 
@@ -138,6 +138,8 @@ function renderCal() {
 	var calendarDays = document.querySelector('#calendarDays');
 	var hasLink = calendarDays.getElementsByClassName("loggable");
 
+	prevLog();
+	calVisual();
 }
 
 renderCal();
@@ -145,27 +147,29 @@ renderCal();
 document.querySelector('#prevMon').addEventListener('click', function() {
 	date.setMonth(date.getMonth() - 1);
 	renderCal();
-	calVisual();
 });
 
 document.querySelector('#nextMon').addEventListener('click', function() {
 	date.setMonth(date.getMonth() + 1);
 	renderCal();
-	calVisual();
 });
 
 
 document.querySelector('#plantDrop').onchange = function() {
 	console.log("plantChanged");
-	renderCal();
+	var newPlant = document.querySelector('#plantDrop').value;
+	window.location.href = "/calendar/" + newPlant;
+	//renderCal();
 	//rerender Cal depending on plant selected (how to get info?)
-	calVisual();
+	//calVisual();
 };
 
 //make calendar show if date has existing entry, and color code based on status
-var testData = test;
+
 	
 function calVisual() {
+	var textJSON = document.querySelector("#getDailyStats").textContent;
+	var testData = JSON.parse(textJSON);
 	var days = $('#calendarDays .loggable');
 	for (var i = 0; i < days.length; i++) {
 		var viewYear = date.getFullYear();
@@ -188,12 +192,12 @@ function calVisual() {
 		var viewDay = days[i].textContent;
 		if (viewDay < 10) {viewDay = "0" + viewDay;}
 		var viewDate = viewMonth + "/" + viewDay + "/" + viewYear;
-		var selectedPlant = document.querySelector('#plantDrop').value;
+		var selectedPlant = document.querySelector('#getViewPlant').textContent;
 		
 
-		for (var j = 0; j < testData[selectedPlant].length; j++) {
-			if (testData[selectedPlant][j]["date"] == viewDate){
-				var moodOfDay = testData[selectedPlant][j]["status"];
+		for (var j = 0; j < testData.length; j++) {
+			if (testData[j]["date"] == viewDate){
+				var moodOfDay = testData[j]["status"];
 				console.log(moodOfDay);
 				days[i].classList.add(moodOfDay);
 			}
@@ -202,4 +206,51 @@ function calVisual() {
 	}
 	console.log(days);
 }
-calVisual();
+
+//remove loggable from dates after start 
+function prevLog() {
+	var firstLog = document.querySelector("#getFirstLoggable").textContent;
+	var firstMonth = firstLog.substring(0, 2);
+	var firstDay = firstLog.substring(3, 5);
+	var firstYear = firstLog.substring(6);
+
+	var days = $('#calendarDays .loggable');
+	for (var i = 0; i < days.length; i++) {
+		var viewYear = date.getFullYear();
+		var viewMonth = date.getMonth() + 1;
+		if (days[i].classList.contains("prev-date")) {
+			viewMonth--;
+			if (viewMonth == 0) {
+				viewYear--;
+				viewMonth = 12;
+			}
+		}
+		if (days[i].classList.contains("next-date")) {
+			viewMonth++;
+			if (viewMonth == 13) {
+				viewYear++;
+				viewMonth = 1;
+			}
+		}
+		if (viewMonth < 10) {viewMonth = "0" + viewMonth;}
+		var viewDay = days[i].textContent;
+		if (viewDay < 10) {viewDay = "0" + viewDay;}
+		//var viewDate = viewMonth + "/" + viewDay + "/" + viewYear;
+
+		if (viewYear < firstYear) {
+			days[i].classList.remove("loggable");
+			days[i].removeAttribute("href");
+		}
+		if (viewYear == firstYear && 
+			viewMonth < firstMonth) {
+			days[i].classList.remove("loggable");
+			days[i].removeAttribute("href");
+		}
+		if (viewYear == firstYear && 
+			viewMonth == firstMonth && 
+			viewDay < firstDay) {
+			days[i].classList.remove("loggable");
+			days[i].removeAttribute("href");
+		}
+	}
+}
