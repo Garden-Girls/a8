@@ -170,6 +170,10 @@ input[type="submit"] {
 	background-color: white;
 }
 
+.footer div {
+	margin: auto 0;
+}
+
 .hide {
 	display:none;
 }
