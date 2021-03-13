@@ -18,9 +18,10 @@
 -->
   <div class="container">
       <div class="header">
-        <img src="/images/leaf.svg" />
-        <h1 id="getNickname">{{nickname}}</h1>
-        <img src="/images/leaf.svg" />
+        <a href='/myPlantsPage'>
+          <img src='/images/back-button.svg'>
+        </a>
+        <h1>My Plants</h1>
       </div>
 <!--
     <div id="prevPage">
@@ -31,6 +32,7 @@
 
     <div id="plantID">
       <img id='journalPhoto' src="/images/{{nickname}}.svg" alt="Image not found" onerror="this.onerror=null;this.src='/images/{{species}}.svg'"/>
+      <h3 id="getNickname">{{nickname}}</h3>
       <h4 class="ital">{{species}}</h4>
       <h4>{{age}} days old</h4>
     </div>
