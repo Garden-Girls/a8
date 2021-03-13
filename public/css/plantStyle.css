@@ -173,3 +173,11 @@ input[type="submit"] {
 .hide {
 	display:none;
 }
+input#submitBtn {
+    border: 2px solid #4CAF50;
+}
+
+input#submitBtn2 {
+    border: 2px solid #4CAF50;
+}
+
