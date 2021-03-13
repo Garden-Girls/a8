@@ -14,11 +14,18 @@ exports.view = function(req, res){
 		}
 	}
 
-	var stringJSON = JSON.stringify(data[req.params.nickname]);
+	var stringJSON = '{}';
+	var startDate = "none";
+	if (index != -1) {
+		startDate = myPlantsData["Plants"][index].start;
+		stringJSON = JSON.stringify(data[req.params.nickname]);
+	}
 
   	res.render('calendar', {
   		"viewPlant": req.params.nickname,
-  		"firstLoggable": myPlantsData["Plants"][index].start,
-  		"dailyStats": stringJSON
+  		"firstLoggable": startDate,
+  		"dailyStats": stringJSON,
+  		//trying to get plants for dropdown select
+  		"Plants": myPlantsData["Plants"]
   	});
 };

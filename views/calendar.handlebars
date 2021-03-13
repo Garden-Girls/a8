@@ -27,6 +27,7 @@
         <!-- hardcoded -->
         <label for="plantDrop">Select a plant:</label>
         <select id="plantDrop">
+            <option value="" disabled selected>Select a Plant</option>
           {{#Plants}}
             <option value={{nickname}}>{{nickname}}</option>
           {{/Plants}}
@@ -64,11 +65,11 @@
           </a>
         </div>
 
-    <div class="footer-item">
-                <a id='plant-button' href='/myPlantsPage'>
-                    <img src="/images/plant-button.svg">
-              </a>
-              </div> 
+        <div class="footer-item">
+          <a id='plant-button' href='/myPlantsPage'>
+            <img src="/images/plant-button.svg">
+          </a>
+        </div> 
         
         <div class="footer-item">
           <a href="/calendar">

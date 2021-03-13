@@ -1,7 +1,37 @@
 const date = new Date(); //today's date
 
+//select option that page is viewing
+var selectedPlant = document.querySelector('#getViewPlant').textContent;
+for (var i = 0; i < document.querySelector('#plantDrop').length; i++) {
+	if (selectedPlant == document.querySelector('#plantDrop')[i].value) {
+		document.querySelector('#plantDrop')[i].selected = 'selected';
+	}
+}
+//
+
+renderCal();
+
+document.querySelector('#prevMon').addEventListener('click', function() {
+	date.setMonth(date.getMonth() - 1);
+	renderCal();
+});
+
+document.querySelector('#nextMon').addEventListener('click', function() {
+	date.setMonth(date.getMonth() + 1);
+	renderCal();
+});
+
+
+document.querySelector('#plantDrop').onchange = function() {
+	console.log("plantChanged");
+	var newPlant = document.querySelector('#plantDrop').value;
+	window.location.href = "/calendar/" + newPlant;
+	//renderCal();
+	//rerender Cal depending on plant selected (how to get info?)
+	//calVisual();
+};
+
 function renderCal() {
-	var selectedPlant = document.querySelector('#getViewPlant').textContent;
 	console.log(selectedPlant);
 
 	const months = ["January", "February", "March", "April", "May", "June", 
@@ -45,8 +75,7 @@ function renderCal() {
 			if (formatDay < 10) {
 				formatDay = "0" + formatDay;
 			}
-			var customLink = "dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
-
+			var customLink = "/dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
 			newDiv.setAttribute("href", customLink);
 		}
 		//end test
@@ -85,7 +114,7 @@ function renderCal() {
 			if (formatDay < 10) {
 				formatDay = "0" + formatDay;
 			}
-			var customLink = "dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
+			var customLink = "/dayEntry/" + selectedPlant + "/" + formatMonth + "/" + formatDay + "/" + formatYear;
 
 			newDiv.setAttribute("href", customLink);
 		}
@@ -142,27 +171,6 @@ function renderCal() {
 	calVisual();
 }
 
-renderCal();
-
-document.querySelector('#prevMon').addEventListener('click', function() {
-	date.setMonth(date.getMonth() - 1);
-	renderCal();
-});
-
-document.querySelector('#nextMon').addEventListener('click', function() {
-	date.setMonth(date.getMonth() + 1);
-	renderCal();
-});
-
-
-document.querySelector('#plantDrop').onchange = function() {
-	console.log("plantChanged");
-	var newPlant = document.querySelector('#plantDrop').value;
-	window.location.href = "/calendar/" + newPlant;
-	//renderCal();
-	//rerender Cal depending on plant selected (how to get info?)
-	//calVisual();
-};
 
 //make calendar show if date has existing entry, and color code based on status
 
@@ -192,7 +200,6 @@ function calVisual() {
 		var viewDay = days[i].textContent;
 		if (viewDay < 10) {viewDay = "0" + viewDay;}
 		var viewDate = viewMonth + "/" + viewDay + "/" + viewYear;
-		var selectedPlant = document.querySelector('#getViewPlant').textContent;
 		
 
 		for (var j = 0; j < testData.length; j++) {
@@ -210,6 +217,15 @@ function calVisual() {
 //remove loggable from dates after start 
 function prevLog() {
 	var firstLog = document.querySelector("#getFirstLoggable").textContent;
+	if (firstLog == "none") {
+		console.log("no start date");
+		var days = $('#calendarDays .loggable');
+		for (var i = 0; i < days.length; i++) {
+			days[i].classList.remove("loggable");
+			days[i].removeAttribute("href");
+		}
+		return;
+	}
 	var firstMonth = firstLog.substring(0, 2);
 	var firstDay = firstLog.substring(3, 5);
 	var firstYear = firstLog.substring(6);
