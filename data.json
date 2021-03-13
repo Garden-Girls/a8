@@ -20,6 +20,24 @@
 					"caption": "6:00 PM"
 				}
 			]
+		},
+		{	
+			"date": "03/04/2021",
+			"text": "Waiting for soil to dry. Drainage issues?",
+			"status": "okay",
+			"slides": []
+		},
+		{	
+			"date": "03/05/2021",
+			"text": "Starting to water every other day now.",
+			"status": "okay",
+			"slides": []
+		},
+		{	
+			"date": "03/07/2021",
+			"text": "Root rot?",
+			"status": "bad",
+			"slides": []
 		}
 	],
 
