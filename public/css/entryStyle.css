@@ -2,7 +2,8 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header {
@@ -88,7 +89,7 @@ h3 {
 	height: 110px;
 	margin: auto;
 	display: flex;
-	background-color: green;
+	background-color: LightGray;
 	overflow: auto;
 	white-space: nowrap;
 	outline: 2px solid black;
@@ -104,6 +105,34 @@ h3 {
 	text-align: center;
 }
 
+img#left {
+    max-width: fit-content;
+}
+
+img#right {
+    max-width: fit-content;
+}
+
+.input {
+	background-color: LightGray;
+	width: 92%;
+	height: 45%;
+	border-radius: 0px 15px 5px 15px;
+	margin: 0px auto 13vh auto;
+}
+
+form#addEntryForm {
+    margin-left: 2%;
+}
+
+input#subPhoto {
+    border: 2px solid #4CAF50;
+    width: 31%;
+}
+
+input#submitBtn {
+    border: 2px solid #4CAF50;
+}
 /*
 .moods {
 	width: 80%;
@@ -170,4 +199,8 @@ input[type='radio'][name='buttonGroup']:checked + label {background-color: yello
 
 .hide {
 	display: none;
+}
+
+div#photoHeader {
+    margin-left: 3%;
 }
