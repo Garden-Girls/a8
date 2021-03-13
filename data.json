@@ -2,14 +2,14 @@
 	"Froggy": [
 		{	
 			"date": "03/01/2021",
-			"text": "blah123",
+			"text": "Looks normal.",
 			"status": "good",
 			"slides": []
 		},
 		{
 			"date": "03/02/2021",
-			"text": "blah234",
-			"status": "bad",
+			"text": "Soil still damp in the morning. Water less?",
+			"status": "okay",
 			"slides": [
 				{
 					"image": "bert.svg",
@@ -26,13 +26,13 @@
 	"Emily": [
 		{	
 			"date": "03/01/2021",
-			"text": "blah123",
+			"text": "Small white spots along the edge of leaves.",
 			"status": "bad",
 			"slides": []
 		},
 		{
 			"date": "03/02/2021",
-			"text": "blah234",
+			"text": "The white spots are spreading. Looks like there are small bugs on the undersides, too. Maybe spider mites?",
 			"status": "bad",
 			"slides": [
 				{
