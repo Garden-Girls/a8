@@ -14,7 +14,7 @@
   <div class="page-container">
 
     <div class="header">
-        <a id='back-button' href='javascript:window.history.back()'>
+        <a id='back-button' href='/search'>
           <img src='/images/back-button.svg'>
         </a>
         
@@ -22,12 +22,13 @@
 
     </div>
     
-    <!--
+    
     <div class="back-button">
       <a id='back-button' href='/search'>
         <img src='/images/back-button.svg'>
       </a>
-    </div> -->
+    </div> 
+
 <div id="body">
     
     <div class="image" title="click to change">
@@ -38,35 +39,41 @@
       <form id="addEntryForm" role="form" method="get" action="/editPlantPage/{{species}}/add">
         
         <div class="form-group" id='nickname'>
-          <label for="name">Nickname:</label>
+          <label class="bold" for="name">Nickname:</label>
           <input type="text" class="form-control" id="name" name="name" required>
+          <p class="ital" id='species'>Species: {{species}}</p>
         </div>
-
-        <label id='species' for='name'>Species: {{species}}</label>
+        
         
         <div id='start-date' class="form-group">
-          <label for="date">Start Date:</label>
+          <label class="bold" for="date">Start Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
         </div>
 
         
-        <h4 id="one">(optional) Watering Reminder</h4>
+        
         <div id="setTime" class="form-group">
-          <label for="remindTime">Time of Day:</label>
+          <h4 id="one">Watering Reminder (optional)</h4>
+          <label class="ital" for="remindTime">Time of Day:</label>
           <input type="time" class="form-control" id="remindTime" name="remindTime">
         </div>
 
         
-        <h4>How often:</h4>
+        
         <div class="form-group">
-          <label for="Every day">Every day</label>
-          <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day">
+          <p class="ital">How often:</p>
+          <div id="periodButtons">
+            <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day">
+            <label for="Every day">Every day</label>
+            <br/>
 
-          <label for="Every other day">Every other day</label>
-          <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">
-          <br>
-          <label for="Every week">Every week</label>
-          <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week">
+            <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">
+            <label for="Every other day">Every other day</label>
+            <br/>
+
+            <input type="radio" class="remindPer" id="every week" name="remindPer" value="every week">
+            <label for="Every week">Every week</label>
+          </div>
 
         </div>
 
@@ -76,7 +83,7 @@
     </div>
 
     
-    <a href="/myPlantsPage"><button id='viewPlants' action='/myPlantsPage'>View All Plants</button></a>
+    <button class="filler" id='viewPlants' onclick="window.location.href='/plant/{{nickname}}'">View Added Plant</button>
 
   </div>
     

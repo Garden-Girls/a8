@@ -4,7 +4,20 @@ console.log(today);
 //document.getElementsByName("date")[0].setAttribute('max', today);
 $("#date")[0].setAttribute('max', today);
 
+var url = String(window.location.href);
+if (url.indexOf("/add?name=") == -1) {
+	//has not added a plant
+	if (document.querySelector("#viewPlants").classList.contains('disabled') == false) {
+		document.querySelector("#viewPlants").classList.add('disabled');
+		console.log(document.querySelector("#viewPlants").classList);
+	}
+}
+else {
 
+	if (document.querySelector("#viewPlants").classList.contains('disabled') == true) {
+		document.querySelector("#viewPlants").classList.remove('disabled');
+	}
+}
 
 
 function imagefun() {

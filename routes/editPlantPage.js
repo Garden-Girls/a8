@@ -4,8 +4,8 @@ exports.view = function(req, res){
 
 
   res.render('editPlantPage', {
-  	"species": addedSpecies,
-  	"img":addedimg
+  	"species": addedSpecies//,
+  	//"img":addedimg
   });
 };
 
@@ -73,7 +73,8 @@ exports.addPlant = function(request, response) { 
 
 	response.render('editPlantPage', {
   		"species": addedSpecies,
-  		"img":addedimg
+  		//"img":addedimg
+  		"nickname": request.query.name
   	});
  }
 
